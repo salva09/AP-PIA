@@ -1,0 +1,7 @@
+{
+  "name": "AP-PIA",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
