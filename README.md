@@ -11,7 +11,7 @@ These instructions will get you a copy of the project up and running on your loc
 What things you need to install the software and how to install them
 
 ```
-Node.js #See the web page in built in to install it
+Node.js #See the web page in *built with* to install it
 Ionic #Use the command 'npm install -g @ionic/cli'
 ```
 
@@ -34,11 +34,12 @@ $ ionic serve
 
 * [Node.js](https://nodejs.org/en/) - JavaScript runtime
 * [Ionic](https://ionicframework.com/) - Framework
-* HTML - Programming language
-* CSS - Style language
-* JavaScript - Programming language
-* TypeScript - Programming language
+* [JavaScript](https://www.javascript.com/) - Programming language
+* [TypeScript](https://www.typescriptlang.org/) - Programming language
+* HTML - Markup language
+* CSS - Style sheet language
 
 ## Authors
 
 * **Salvador Hernandez** - *Initial work* - [salva09](https://github.com/salva09)
+* There are more
