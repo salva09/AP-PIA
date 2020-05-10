@@ -14,8 +14,12 @@
     </ion-toolbar>
   </ion-header>
 
-  <ion-list *ngFor = "let pagina of paginas" text-center>
-    <ion-button href={{pagina.referencia}}>{{ pagina.nombre }}</ion-button>
+  <div>
+    NOTA: Ésto es temporal, sólo para redirigir a las páginas existentes, todavía no sé qué va a haber aquí xd
+  </div>
+
+  <ion-list *ngFor = "let pagina of paginas">
+    <ion-button href={{pagina.referencia}} style="display:block; width:70%; margin:auto; margin-bottom:10px;">{{ pagina.nombre }}</ion-button>
   </ion-list>
   
 </ion-content>
