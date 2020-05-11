@@ -1,9 +1,28 @@
 <ion-header style="margin-bottom:15px;">
   <ion-toolbar>
-    <ion-title size="large" style="text-align:center;">Licenciaturas</ion-title>
+    <ion-title size="large" style="text-align:center;">Licenciatura en Ciencias Computacionales</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-  
+
+  <ion-button href="/home" style="display:block; margin:auto; width: 90%; margin-bottom:20px;">Botón Temporal Para Volver</ion-button>
+
+  <ion-img src="assets/Licenciaturas/lcc.jpg" style="width:70%; margin:auto; margin-bottom:20px;"></ion-img>
+
+  <ion-card *ngFor = "let seccion of secciones" style="width:80%; margin:auto; margin-bottom:20px;">
+    <ion-card-header>
+      <ion-card-title>
+        <ion-icon [name]="seccion.icon"></ion-icon>
+        <ion-label>
+          {{ seccion.titulo }}
+        </ion-label>
+      </ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content style="text-align:justify;">
+     <div [innerHtml] = "seccion.texto"></div>
+    </ion-card-content>
+  </ion-card>
+
 </ion-content>
