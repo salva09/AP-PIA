@@ -9,4 +9,22 @@ export class HomePage {
 
   constructor() {}
 
+  paginas = [
+    {
+      nombre: "Inicio",
+      referencia: "/home"
+    },
+    {
+      nombre: "Licenciaturas",
+      referencia: "/licenciaturas"
+    },
+    {
+      nombre: "Contacto",
+      referencia: "/contacto"
+    },
+    {
+      nombre: "LCC",
+      referencia: "/licenciaturas/ciencias-computacionales"
+    }
+  ]
 }

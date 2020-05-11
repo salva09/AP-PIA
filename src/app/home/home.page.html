@@ -1,20 +1,25 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>
-      Blank
+    <ion-title style="text-align:center;">
+      <ion-icon name="calculator-sharp"></ion-icon>
+      Facultad de Ciencias Físico Matemáticas
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
+<ion-content>
+  <ion-header>
     <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
+      <ion-title size="large" style="text-align:center;">Inicio</ion-title>
     </ion-toolbar>
   </ion-header>
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+  <div>
+    NOTA: Ésto es temporal, sólo para redirigir a las páginas existentes, todavía no sé qué va a haber aquí xd
   </div>
+
+  <ion-list *ngFor = "let pagina of paginas">
+    <ion-button href={{pagina.referencia}} style="display:block; width:70%; margin:auto; margin-bottom:10px;">{{ pagina.nombre }}</ion-button>
+  </ion-list>
+  
 </ion-content>
