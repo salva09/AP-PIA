@@ -21,6 +21,10 @@ export class HomePage {
     {
       nombre: "Contacto",
       referencia: "/contacto"
+    },
+    {
+      nombre: "LCC",
+      referencia: "/licenciaturas/ciencias-computacionales"
     }
   ]
 }
