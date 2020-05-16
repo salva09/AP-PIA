@@ -1,21 +1,36 @@
+<ion-menu side="start" menuId="custom" contentId="main" class="my-custom-menu">
+  <ion-header>
+    <ion-toolbar color="tertiary">
+      <ion-title>
+        <ion-icon name="calculator-sharp"></ion-icon>
+        FCFM
+      </ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content>
+    <ion-list>
+      <ion-item *ngFor = "let pagina of paginas" [routerLink]="pagina.referencia">
+        {{ pagina.nombre }}
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-menu>
+
+<ion-router-outlet id="main"></ion-router-outlet>
+
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title style="text-align:center;">
-      <ion-icon name="calculator-sharp"></ion-icon>
-      Facultad de Ciencias Físico Matemáticas
+    <ion-buttons slot="start">
+      <ion-menu-button autoHide="false"></ion-menu-button>
+    </ion-buttons>
+
+    <ion-title>
+      Licenciaturas
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-  <ion-header style="margin-bottom:15px;">
-    <ion-toolbar>
-      <ion-title size="large" style="text-align:center;">Licenciaturas</ion-title>
-    </ion-toolbar>
-  </ion-header>
-
-  <ion-button href="/home" style="display:block; margin:auto; width: 90%; margin-bottom:20px;">Botón Temporal Para Volver</ion-button>
-
   <ion-card *ngFor = "let licenciatura of licenciaturas" style="width:80%; display:block; margin:auto; margin-bottom:20px;">
     <ion-card-header style="text-align:center;">
       <ion-card-title>
