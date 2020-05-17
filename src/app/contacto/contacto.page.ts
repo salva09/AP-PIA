@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {MenuController} from "@ionic/angular";
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-contacto',
@@ -8,31 +9,7 @@ import {MenuController} from "@ionic/angular";
 })
 export class ContactoPage implements OnInit {
 
-  constructor(private menu: MenuController) {}
-
-  openCustom() {
-    this.menu.enable(true, 'custom');
-    this.menu.open('custom');
-  }
-
-  paginas = [
-    {
-      nombre: "Inicio",
-      referencia: "/home"
-    },
-    {
-      nombre: "Licenciaturas",
-      referencia: "/licenciaturas"
-    },
-    {
-      nombre: "Contacto",
-      referencia: "/contacto"
-    },
-    {
-      nombre: "LCC",
-      referencia: "/licenciaturas/ciencias-computacionales"
-    }
-  ]
+  constructor(private menu: MenuController, private router: Router) {}
 
   ngOnInit() {
   }

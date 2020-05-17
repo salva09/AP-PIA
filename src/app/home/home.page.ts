@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import {MenuController} from "@ionic/angular";
+import {Router} from "@angular/router";
 
 @Component({
     selector: 'app-home',
@@ -8,29 +9,6 @@ import {MenuController} from "@ionic/angular";
 })
 export class HomePage {
 
-    constructor(private menu: MenuController) {}
+    constructor(private menu: MenuController, private router: Router) {}
 
-    openCustom() {
-        this.menu.enable(true, 'custom');
-        this.menu.open('custom');
-    }
-
-    paginas = [
-        {
-            nombre: "Inicio",
-            referencia: "/home"
-        },
-        {
-            nombre: "Licenciaturas",
-            referencia: "/licenciaturas"
-        },
-        {
-            nombre: "Contacto",
-            referencia: "/contacto"
-        },
-        {
-            nombre: "LCC",
-            referencia: "/licenciaturas/ciencias-computacionales"
-        }
-    ]
 }

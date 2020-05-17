@@ -1,23 +1,3 @@
-<ion-menu side="start" menuId="custom" contentId="main" class="my-custom-menu">
-    <ion-header>
-        <ion-toolbar color="tertiary">
-            <ion-title>
-                <ion-icon name="calculator-sharp"></ion-icon>
-                FCFM
-            </ion-title>
-        </ion-toolbar>
-    </ion-header>
-    <ion-content>
-        <ion-list>
-            <ion-item *ngFor = "let pagina of paginas" [routerLink]="pagina.referencia">
-                {{ pagina.nombre }}
-            </ion-item>
-        </ion-list>
-    </ion-content>
-</ion-menu>
-
-<ion-router-outlet id="main"></ion-router-outlet>
-
 <ion-header [translucent]="true">
     <ion-toolbar>
         <ion-buttons slot="start">
@@ -29,7 +9,6 @@
         </ion-title>
     </ion-toolbar>
 </ion-header>
-
 
 <ion-content>
 

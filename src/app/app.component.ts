@@ -18,6 +18,25 @@ export class AppComponent {
     this.initializeApp();
   }
 
+  paginas = [
+    {
+      nombre: "Inicio",
+      referencia: "/home"
+    },
+    {
+      nombre: "Licenciaturas",
+      referencia: "/licenciaturas"
+    },
+    {
+      nombre: "Contacto",
+      referencia: "/contacto"
+    },
+    {
+      nombre: "LCC",
+      referencia: "/licenciaturas/ciencias-computacionales"
+    }
+  ]
+
   initializeApp() {
     this.platform.ready().then(() => {
       this.statusBar.styleDefault();

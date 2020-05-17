@@ -10,30 +10,6 @@ export class LicenciaturasPage implements OnInit {
 
   constructor(private menu: MenuController) { }
 
-  openCustom() {
-    this.menu.enable(true, 'custom');
-    this.menu.open('custom');
-  }
-
-  paginas = [
-    {
-      nombre: "Inicio",
-      referencia: "/home"
-    },
-    {
-      nombre: "Licenciaturas",
-      referencia: "/licenciaturas"
-    },
-    {
-      nombre: "Contacto",
-      referencia: "/contacto"
-    },
-    {
-      nombre: "LCC",
-      referencia: "/licenciaturas/ciencias-computacionales"
-    }
-  ]
-
   reproducir(licenciatura) {
     let sonido = new Audio();
     sonido.src = licenciatura.audio;

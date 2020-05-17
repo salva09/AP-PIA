@@ -10,30 +10,6 @@ export class CienciasComputacionalesPage implements OnInit {
 
   constructor(private menu: MenuController) {}
 
-  openCustom() {
-    this.menu.enable(true, 'custom');
-    this.menu.open('custom');
-  }
-
-  paginas = [
-    {
-      nombre: "Inicio",
-      referencia: "/home"
-    },
-    {
-      nombre: "Licenciaturas",
-      referencia: "/licenciaturas"
-    },
-    {
-      nombre: "Contacto",
-      referencia: "/contacto"
-    },
-    {
-      nombre: "LCC",
-      referencia: "/licenciaturas/ciencias-computacionales"
-    }
-  ]
-
   secciones = [
     {
       titulo: "Objetivo:",
