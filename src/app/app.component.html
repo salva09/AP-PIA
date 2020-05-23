@@ -10,9 +10,11 @@
     </ion-header>
     <ion-content>
       <ion-list>
-        <ion-item *ngFor = "let pagina of paginas" [routerLink]="pagina.referencia">
-          {{ pagina.nombre }}
-        </ion-item>
+        <ion-menu-toggle *ngFor = "let pagina of paginas" [routerLink]="pagina.referencia">
+          <ion-item >
+            {{ pagina.nombre }}
+          </ion-item>
+        </ion-menu-toggle>
       </ion-list>
     </ion-content>
   </ion-menu>
