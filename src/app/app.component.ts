@@ -3,6 +3,7 @@ import { Component } from '@angular/core';
 import { Platform } from '@ionic/angular';
 import { SplashScreen } from '@ionic-native/splash-screen/ngx';
 import { StatusBar } from '@ionic-native/status-bar/ngx';
+import { Animation, AnimationController } from '@ionic/angular';
 
 @Component({
   selector: 'app-root',
@@ -13,9 +14,26 @@ export class AppComponent {
   constructor(
     private platform: Platform,
     private splashScreen: SplashScreen,
-    private statusBar: StatusBar
+    private statusBar: StatusBar,
+    private animationCtrl: AnimationController
   ) {
     this.initializeApp();
+  }
+
+  animateArrow(open) {
+    let animation: Animation;
+    if (open) {
+      animation = this.animationCtrl.create()
+          .addElement(document.querySelector('.arrow'))
+          .duration(100)
+          .fromTo('transform', 'rotate(90deg)', 'rotate(0deg)');
+    } else {
+      animation = this.animationCtrl.create()
+          .addElement(document.querySelector('.arrow'))
+          .duration(100)
+          .fromTo('transform', 'rotate(0deg)', 'rotate(90deg)');
+    }
+    animation.play()
   }
 
   paginas = [

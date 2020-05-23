@@ -21,10 +21,9 @@
           </ion-item>
         </ion-menu-toggle>
         
-        <ion-item button *ngIf="pagina.children?.length > 0" (click)="pagina.open = !pagina.open" 
+        <ion-item button *ngIf="pagina.children?.length > 0" (click)="pagina.open = !pagina.open; animateArrow(!pagina.open)"
           [class.active-parent]="pagina.open" detail = "false">
-          <ion-icon slot="end" name="arrow-forward" *ngIf="!pagina.open"></ion-icon>
-          <ion-icon slot="end" name="arrow-down" *ngIf="pagina.open"></ion-icon>
+          <ion-icon slot="end" name="arrow-forward" class="arrow"></ion-icon>
           <ion-label> {{ pagina.nombre }} </ion-label>
         </ion-item>
 
