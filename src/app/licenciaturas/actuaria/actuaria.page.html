@@ -8,5 +8,19 @@
 </ion-header>
 
 <ion-content>
-UWU
+  <ion-card *ngFor = "let seccion of secciones" style="width:80%; margin:auto; margin-bottom:20px;">
+    <ion-card-header>
+        <ion-card-title>
+            <ion-icon [name]="seccion.icon"></ion-icon>
+            <ion-label>
+                {{ seccion.titulo }}
+            </ion-label>
+        </ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content style="text-align:justify;">
+        <div [innerHtml] = "seccion.texto"></div>
+    </ion-card-content>
+</ion-card>
+
 </ion-content>
