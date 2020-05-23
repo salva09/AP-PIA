@@ -30,7 +30,7 @@
 
         <ion-list *ngIf="pagina.open">
           <ion-menu-toggle>
-            <ion-item *ngFor="let sub of pagina.children" [routerLink]="sub.referencia" routerDirection="root" routerLinkActive="active">
+            <ion-item class="sub-item" *ngFor="let sub of pagina.children" [routerLink]="sub.referencia" routerDirection="root" routerLinkActive="active">
               <ion-label>
                 {{ sub.nombre }}
               </ion-label>
