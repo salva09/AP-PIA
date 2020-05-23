@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { MenuController } from "@ionic/angular";
 
 @Component({
   selector: 'app-multimedia',
@@ -7,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MultimediaPage implements OnInit {
 
-  constructor() { }
+  constructor(private menu: MenuController) { }
 
   ngOnInit() {
   }

@@ -24,16 +24,45 @@ export class AppComponent {
       referencia: "/home"
     },
     {
-      nombre: "Licenciaturas",
-      referencia: "/licenciaturas"
-    },
-    {
       nombre: "Contacto",
       referencia: "/contacto"
     },
     {
-      nombre: "LCC",
-      referencia: "/licenciaturas/ciencias-computacionales"
+      nombre: "Licenciaturas",
+      children: [
+        {
+          nombre: "Oferta Académica",
+          referencia: "/licenciaturas"
+        },
+        {
+          nombre: "Matemáticas",
+          referencia: "/licenciaturas/matematicas"
+        },
+        {
+          nombre: "Física",
+          referencia: "/licenciaturas/fisica"
+        },
+        {
+          nombre: "Ciencias Computacionales",
+          referencia: "/licenciaturas/ciencias-computacionales"
+        },
+        {
+          nombre: "Actuaría",
+          referencia: "/licenciaturas/actuaria"
+        },
+        {
+          nombre: "Multimedia y Animación Digital",
+          referencia: "/licenciaturas/multimedia"
+        },
+        {
+          nombre: "Seguridad Infromática",
+          referencia: "/licenciaturas/seguridad-informatica"
+        },
+      ]
+    },
+    {
+      nombre: "Posgrado",
+      referencia: "/posgrado"
     }
   ]
 
