@@ -11,6 +11,10 @@
 </ion-header>
 <!-- No se si lo del formulario iba en contacto xD - SILVIA -->
 <ion-content>
+    <ion-button (click)="hacerFoto()">Hacer foto</ion-button>
+    <img [src]="foto" *ngIf="foto" />
+    <br>
+    <br>
     <form>
         <ion-list>
             <br>
