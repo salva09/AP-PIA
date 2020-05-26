@@ -1,6 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import {MenuController} from "@ionic/angular";
-import {Router} from "@angular/router";
 import { Camera, CameraOptions } from '@ionic-native/camera/ngx'
 
 @Component({
@@ -10,13 +8,9 @@ import { Camera, CameraOptions } from '@ionic-native/camera/ngx'
 })
 export class ContactoPage implements OnInit {
 
-  //constructor(private menu: MenuController, private router: Router) {}
-
-  
+  constructor(private camera: Camera) {}
 
   foto: any;
-
-  constructor(private camera: Camera) { }
 
   hacerFoto() {
     const options: CameraOptions = {
@@ -31,8 +25,8 @@ export class ContactoPage implements OnInit {
       console.log(err);
     });
   }
+
   ngOnInit() {
   }
-
 
 }
