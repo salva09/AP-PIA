@@ -29,8 +29,8 @@ export class CienciasComputacionalesPage implements OnInit {
         "Tecnología, el cual incluye las áreas de física y matemáticas que deben dominar los estudiantes para ingresar al programa de " +
         "educación superior que han elegido.<br><br>" +
         "Para que el estudiante logre con éxito el plan de estudios es deseable que posea las siguientes características:<br>" +
-        "•Tener gusto por la ciencia y la tecnología.<br>" +
-        "•Tener gusto por las matemáticas"
+        "• Tener gusto por la ciencia y la tecnología.<br>" +
+        "• Tener gusto por las matemáticas."
     },
     {
       titulo: "Cualidades del Egresado:",
@@ -50,21 +50,21 @@ export class CienciasComputacionalesPage implements OnInit {
         "Departamento de Sistemas, Desarrollo de Software, Tecnologías de la Información o Soporte Tecnológico de instituciones " +
         "públicas y privadas en general: <br><br>" +
 
-        "• Analiza sistemas de software<br>" +
-        "• Diseña sistemas de software<br>" +
+        "• Analiza sistemas de software.<br>" +
+        "• Diseña sistemas de software.<br>" +
         "• Desarrolla sistemas de software<br>" +
-        "• Asegura la calidad del sistema de software<br>" +
-        "• Implementa sistemas de software<br>" +
-        "• Mantiene sistemas de software<br>" +
-        "• Audita sistemas de software<br>" +
-        "• Construye software de base<br>" +
-        "• Crea soluciones de software web y aplicativo<br>" +
-        "• Lidera proyectos de software<br>" +
-        "• Administra proyectos de sistemas computacionales<br>" +
-        "• Administra redes y servicios de telecomunicaciones<br>" +
-        "• Administra bases de datos<br>" +
+        "• Asegura la calidad del sistema de software.<br>" +
+        "• Implementa sistemas de software.<br>" +
+        "• Mantiene sistemas de software.<br>" +
+        "• Audita sistemas de software.<br>" +
+        "• Construye software de base.<br>" +
+        "• Crea soluciones de software web y aplicativo.<br>" +
+        "• Lidera proyectos de software.<br>" +
+        "• Administra proyectos de sistemas computacionales.<br>" +
+        "• Administra redes y servicios de telecomunicaciones.<br>" +
+        "• Administra bases de datos.<br>" +
         "• Consultor de empresas en sus áreas de tecnología de información.<br>" +
-        "• Investiga y desarrolla nuevas tecnologías en empresas líderes en su ramo o en Instituciones Educativas"
+        "• Investiga y desarrolla nuevas tecnologías en empresas líderes en su ramo o en Instituciones Educativas."
     },
     {
       titulo: "Plan de Estudios",
