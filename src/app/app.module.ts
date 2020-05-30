@@ -20,7 +20,7 @@ import { GoogleMaps } from '@ionic-native/google-maps';
     SplashScreen,
     Camera,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
-      GoogleMaps
+    GoogleMaps
   ],
   bootstrap: [AppComponent]
 })
