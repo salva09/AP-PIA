@@ -1,15 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { Geolocation, Geoposition } from '@ionic-native/geolocation/ngx';
+import { LoadingController } from '@ionic/angular';
 
-import {
-  GoogleMaps,
-  GoogleMap,
-  GoogleMapsEvent,
-  Marker,
-  GoogleMapsAnimation,
-  MyLocation
-} from "@ionic-native/google-maps";
-
-import { Platform, LoadingController, ToastController } from "@ionic/angular";
+declare var google;
 
 @Component({
   selector: 'app-mapa',
@@ -18,92 +11,61 @@ import { Platform, LoadingController, ToastController } from "@ionic/angular";
 })
 export class MapaPage implements OnInit {
 
-  map: GoogleMap;
-  loading: any;
-  homeMarker: Marker;
+  map: any;
+  directionsService = new google.maps.DirectionsService();
+  directionsDisplay = new google.maps.DirectionsRenderer();
 
-  constructor(
-      public loadingCtrl: LoadingController,
-      public toastCtrl: ToastController,
-      private platform: Platform
-  ) {}
+  destination = { lat: 25.725627, lng: -100.315146 };
 
-  async ngOnInit() {
-    await this.platform.ready();
-    await this.loadMap();
+
+  constructor(private geolocation: Geolocation,
+    //EL LOADCTRL SIRVE PARA QUE CUANDO VEAN EL MAPA LES APAREZCA EL SIGNO DE CARGANDO EN PLAN DE "NO LE MUEVAS HASTA QUE CARGUE"
+    private loadCtrl: LoadingController) {
   }
+  //ES PA 
+  ngOnInit() {
+    this.loadMap();
+  }
+  //Usamos async para no mm hacer una promesa xd Por asi decirlo 
+  
 
   loadMap() {
-    this.map = GoogleMaps.create("map_canvas", {
-      camera: {
-        target: {
-          lat: 25.725608,
-          lng: -100.315211
-        },
-        zoom: 18,
-        tilt: 30
+    // create a new map by passing HTMLElement
+    const mapEle: HTMLElement = document.getElementById('map');
+    // create map
+    this.map = new google.maps.Map(mapEle, {
+      center: this.destination,
+      zoom: 12
+    });
+  
+    this.directionsDisplay.setMap(this.map);
+  
+    google.maps.event.addListenerOnce(this.map, 'idle', () => {
+      mapEle.classList.add('show-map');
+      this.calculateRoute();
+    });
+  }
+
+  private async calculateRoute() {
+    this.directionsService.route({
+      origin: await this.obtenerLocalizacion(),
+      destination: this.destination,
+      travelMode: google.maps.TravelMode.DRIVING,
+    }, (response, status)  => {
+      if (status === google.maps.DirectionsStatus.OK) {
+        this.directionsDisplay.setDirections(response);
+      } else {
+        alert('Could not display directions due to: ' + status);
       }
     });
+    }
 
-      this.map.addMarkerSync({
-          title: "FCFM",
-          snippet: "Aquí se encuentra la facultad",
-          position: {
-              lat: 25.725608,
-              lng: -100.315211
-          },
-          animation: GoogleMapsAnimation.BOUNCE
-      });
-  }
-
-  async localizar() {
-      //await this.map.clear();
-      await this.homeMarker.remove();
-
-    this.loading = await this.loadingCtrl.create({
-      message: "Espere por favor..."
-    });
-
-    await this.loading.present();
-
-    this.map
-        .getMyLocation()
-        .then((location: MyLocation) => {
-          this.loading.dismiss();
-
-          this.map.animateCamera({
-            target: location.latLng,
-            zoom: 17,
-            tilt: 30
-          });
-
-          this.homeMarker = this.map.addMarkerSync({
-            title: "Estoy aquí!",
-            snippet: "Esta es su ubicación",
-            position: location.latLng,
-            animation: GoogleMapsAnimation.BOUNCE
-          });
-
-          this.homeMarker.showInfoWindow();
-
-          this.homeMarker.on(GoogleMapsEvent.MARKER_CLICK).subscribe(() => {
-            this.showToast("clicked!");
-          });
-        })
-        .catch(error => {
-          this.loading.dismiss();
-          this.showToast(error.error_message);
-        });
-  }
-
-  async showToast(mensaje) {
-    let toast = await this.toastCtrl.create({
-      message: mensaje,
-      duration: 2000,
-      position: "bottom"
-    });
-
-    await toast.present();
+  private async obtenerLocalizacion(){
+    const rta = await this.geolocation.getCurrentPosition();
+    return {
+      lat: rta.coords.latitude,
+      lng: rta.coords.longitude
+    };
   }
 
 }
