@@ -11,28 +11,26 @@ declare var google;
 })
 export class MapaPage implements OnInit {
 
+  //Creamos nuestras variables globales
   map: any;
   directionsService = new google.maps.DirectionsService();
   directionsDisplay = new google.maps.DirectionsRenderer();
 
   destination = { lat: 25.725627, lng: -100.315146 };
 
-
   constructor(private geolocation: Geolocation,
-    //EL LOADCTRL SIRVE PARA QUE CUANDO VEAN EL MAPA LES APAREZCA EL SIGNO DE CARGANDO EN PLAN DE "NO LE MUEVAS HASTA QUE CARGUE"
     private loadCtrl: LoadingController) {
   }
-  //ES PA 
+
+  //Al cargar la página, cargamos el mapa
   ngOnInit() {
     this.loadMap();
-  }
-  //Usamos async para no mm hacer una promesa xd Por asi decirlo 
-  
+  }  
 
   loadMap() {
-    // create a new map by passing HTMLElement
+    //Obtenemos nuestro elemento map del HTmL
     const mapEle: HTMLElement = document.getElementById('map');
-    // create map
+    //Creamos un mapa con centro en la facultad
     this.map = new google.maps.Map(mapEle, {
       center: this.destination,
       zoom: 12
@@ -40,6 +38,7 @@ export class MapaPage implements OnInit {
   
     this.directionsDisplay.setMap(this.map);
   
+    //Cuando el mapa esté "listo", calcular la ruta
     google.maps.event.addListenerOnce(this.map, 'idle', () => {
       mapEle.classList.add('show-map');
       this.calculateRoute();
@@ -58,7 +57,7 @@ export class MapaPage implements OnInit {
         alert('Could not display directions due to: ' + status);
       }
     });
-    }
+  }
 
   private async obtenerLocalizacion(){
     const rta = await this.geolocation.getCurrentPosition();
