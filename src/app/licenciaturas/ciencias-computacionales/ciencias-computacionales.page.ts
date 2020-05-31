@@ -52,7 +52,7 @@ export class CienciasComputacionalesPage implements OnInit {
 
         "• Analiza sistemas de software.<br>" +
         "• Diseña sistemas de software.<br>" +
-        "• Desarrolla sistemas de software<br>" +
+        "• Desarrolla sistemas de software.<br>" +
         "• Asegura la calidad del sistema de software.<br>" +
         "• Implementa sistemas de software.<br>" +
         "• Mantiene sistemas de software.<br>" +
