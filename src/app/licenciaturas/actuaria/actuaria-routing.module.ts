@@ -7,7 +7,11 @@ const routes: Routes = [
   {
     path: '',
     component: ActuariaPage
+  },  {
+    path: 'plan-la',
+    loadChildren: () => import('./plan-la/plan-la.module').then( m => m.PlanLAPageModule)
   }
+
 ];
 
 @NgModule({

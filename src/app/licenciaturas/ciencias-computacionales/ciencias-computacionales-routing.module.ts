@@ -7,7 +7,11 @@ const routes: Routes = [
   {
     path: '',
     component: CienciasComputacionalesPage
+  },  {
+    path: 'plan-lcc',
+    loadChildren: () => import('./plan-lcc/plan-lcc.module').then( m => m.PlanLCCPageModule)
   }
+
 ];
 
 @NgModule({
