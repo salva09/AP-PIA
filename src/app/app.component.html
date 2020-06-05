@@ -1,6 +1,5 @@
 <ion-app>
   <ion-menu side="start" menuId="custom" contentId="main" class="my-custom-menu">
-
     <ion-header>
       <ion-toolbar color="tertiary">
         <ion-title>
@@ -11,20 +10,24 @@
     </ion-header>
 
     <ion-content>
-
       <div *ngFor="let pagina of paginas">
-        <ion-menu-toggle *ngIf= "pagina.referencia">
+        <ion-menu-toggle *ngIf= "pagina.nombre != 'Licenciaturas'">
           <ion-item [routerLink]="pagina.referencia" routerDirection="root" routerLinkActive="active">
             <ion-label>
               {{ pagina.nombre }}
             </ion-label>
           </ion-item>
         </ion-menu-toggle>
-        
-        <ion-item button *ngIf="pagina.children?.length > 0" (click)="pagina.open = !pagina.open; animateArrow(!pagina.open)"
-          [class.active-parent]="pagina.open" detail = "false">
-          <ion-icon slot="end" name="arrow-forward" class="arrow"></ion-icon>
-          <ion-label> {{ pagina.nombre }} </ion-label>
+
+        <ion-item *ngIf="pagina.nombre == 'Licenciaturas'"
+                [class.active-parent]="pagina.open"
+                button>
+          <ion-menu-toggle [routerLink]="pagina.referencia" routerDirection="root" routerLinkActive="active">
+            <ion-label style="padding: 10px 145px 10px 0px; margin: 0px">
+              {{ pagina.nombre }}
+            </ion-label>
+          </ion-menu-toggle>
+          <ion-icon slot="end" name="arrow-forward" class="arrow" (click)="pagina.open = !pagina.open; animateArrow(!pagina.open)"></ion-icon>
         </ion-item>
 
         <ion-list *ngIf="pagina.open">
@@ -36,10 +39,7 @@
             </ion-item>
           </ion-menu-toggle>
         </ion-list>
-
       </div>
-
-
     </ion-content>
   </ion-menu>
 
