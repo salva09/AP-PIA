@@ -47,11 +47,8 @@ export class AppComponent {
     },
     {
       nombre: "Licenciaturas",
+      referencia: "/licenciaturas",
       children: [
-        {
-          nombre: "Oferta Académica",
-          referencia: "/licenciaturas"
-        },
         {
           nombre: "Matemáticas",
           referencia: "/licenciaturas/matematicas"
