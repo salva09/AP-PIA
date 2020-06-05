@@ -1,6 +1,5 @@
 <ion-app>
   <ion-menu side="start" menuId="custom" contentId="main" class="my-custom-menu">
-
     <ion-header>
       <ion-toolbar color="tertiary">
         <ion-title>
@@ -11,7 +10,6 @@
     </ion-header>
 
     <ion-content>
-
       <div *ngFor="let pagina of paginas">
         <ion-menu-toggle *ngIf= "pagina.referencia">
           <ion-item [routerLink]="pagina.referencia" routerDirection="root" routerLinkActive="active">
@@ -36,10 +34,7 @@
             </ion-item>
           </ion-menu-toggle>
         </ion-list>
-
       </div>
-
-
     </ion-content>
   </ion-menu>
 

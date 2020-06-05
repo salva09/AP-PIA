@@ -1,7 +1,9 @@
 import { Component, OnInit } from '@angular/core';
+//Importamos las dependencias de la geolocalizacion
 import { Geolocation, Geoposition } from '@ionic-native/geolocation/ngx';
 import { LoadingController } from '@ionic/angular';
 
+//Declaramos la variable google de donde usaremos los métodos principales para el mapa
 declare var google;
 
 @Component({
