@@ -47,11 +47,8 @@ export class AppComponent {
     },
     {
       nombre: "Licenciaturas",
+      referencia: "/licenciaturas",
       children: [
-        {
-          nombre: "Oferta Académica",
-          referencia: "/licenciaturas"
-        },
         {
           nombre: "Matemáticas",
           referencia: "/licenciaturas/matematicas"
@@ -86,6 +83,8 @@ export class AppComponent {
 
   initializeApp() {
     this.platform.ready().then(() => {
+      this.statusBar.overlaysWebView(false);
+      this.statusBar.backgroundColorByHexString('#ffffff');
       this.statusBar.styleDefault();
       this.splashScreen.hide();
     });
