@@ -14,6 +14,7 @@
         <ion-menu-toggle *ngIf= "pagina.nombre != 'Licenciaturas'">
           <ion-item [routerLink]="pagina.referencia" routerDirection="root" routerLinkActive="active">
             <ion-label>
+              <ion-icon [name]="pagina.icon"></ion-icon>
               {{ pagina.nombre }}
             </ion-label>
           </ion-item>
@@ -24,6 +25,7 @@
                 button>
           <ion-menu-toggle [routerLink]="pagina.referencia" routerDirection="root" routerLinkActive="active">
             <ion-label style="padding: 10px 145px 10px 0px; margin: 0px">
+              <ion-icon [name]="pagina.icon"></ion-icon>
               {{ pagina.nombre }}
             </ion-label>
           </ion-menu-toggle>
@@ -34,6 +36,7 @@
           <ion-menu-toggle>
             <ion-item class="sub-item" *ngFor="let sub of pagina.children" [routerLink]="sub.referencia" routerDirection="root" routerLinkActive="active">
               <ion-label>
+                <ion-icon [name]="sub.icon"></ion-icon>
                 {{ sub.nombre }}
               </ion-label>
             </ion-item>

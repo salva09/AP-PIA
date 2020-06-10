@@ -39,45 +39,55 @@ export class AppComponent {
   paginas = [
     {
       nombre: "Inicio",
-      referencia: "/home"
+      referencia: "/home",
+      icon: "home-outline"
     },
     {
       nombre: "Contacto",
-      referencia: "/contacto"
+      referencia: "/contacto",
+      icon: "call-outline"
     },
     {
       nombre: "Licenciaturas",
       referencia: "/licenciaturas",
+      icon: "book-outline",
       children: [
         {
           nombre: "Matemáticas",
-          referencia: "/licenciaturas/matematicas"
+          referencia: "/licenciaturas/matematicas",
+          icon: "calculator-outline"
         },
         {
           nombre: "Física",
-          referencia: "/licenciaturas/fisica"
+          referencia: "/licenciaturas/fisica",
+          icon: "logo-electron"
         },
         {
           nombre: "Ciencias Computacionales",
-          referencia: "/licenciaturas/ciencias-computacionales"
+          referencia: "/licenciaturas/ciencias-computacionales",
+          icon: "desktop-outline"
         },
         {
           nombre: "Actuaría",
-          referencia: "/licenciaturas/actuaria"
+          referencia: "/licenciaturas/actuaria",
+          icon: "bar-chart-outline"
         },
         {
           nombre: "Multimedia y Animación Digital",
-          referencia: "/licenciaturas/multimedia"
+          referencia: "/licenciaturas/multimedia",
+          icon: "game-controller-outline"
         },
         {
           nombre: "Seguridad Infromática",
-          referencia: "/licenciaturas/seguridad-informatica"
+          referencia: "/licenciaturas/seguridad-informatica",
+          icon: "lock-closed-outline"
         },
       ]
     },
     {
       nombre: "Posgrado",
-      referencia: "/posgrado"
+      referencia: "/posgrado",
+      icon: "school-outline"
     }
   ]
 
