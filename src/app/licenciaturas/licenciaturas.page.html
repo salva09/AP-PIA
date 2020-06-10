@@ -23,14 +23,26 @@
 
       <p><b>Objetivo: </b><br></p>
       {{ licenciatura.descripcion }}
-      <ion-button (click)="reproducir(licenciatura)" style="display:block; margin:auto; margin-top:10px;">
-        <ion-icon name="play-outline" slot="start"></ion-icon>
-        Reproducir Audio
-      </ion-button>
+      
       <ion-button [routerLink]="licenciatura.pagina" style="display:block; margin:auto; margin-top:10px;">
         <ion-icon name="bulb-outline" slot="start"></ion-icon>
         Conoce Más
       </ion-button>
+
+      <ion-button (click)="start(licenciatura.audio, $event)" style="display:block; margin:auto; margin-top:10px;">
+        <ion-icon name="headset-outline" slot="start"></ion-icon>
+        Reproducir Audio
+      </ion-button>
+
+      <ion-footer *ngIf="activeAudio" class="ion-text-center">
+        <ion-button *ngIf="activeAudio == licenciatura.audio && !isPlaying" (click)="togglePlayer(false)">
+          <ion-icon slot="icon-only" name="play"></ion-icon>
+        </ion-button>
+
+        <ion-button *ngIf="activeAudio == licenciatura.audio && isPlaying" (click)="togglePlayer(true)">
+          <ion-icon slot="icon-only" name="pause"></ion-icon>
+        </ion-button>
+      </ion-footer>
       
     </ion-card-content>
   </ion-card>
