@@ -7,14 +7,11 @@
       <ion-title>
           Licenciatura en Matemáticas
       </ion-title>
-      <ion-subtitle>
-        Plan de Estudios
-      </ion-subtitle>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-  <ion-card *ngFor = "let semestre of semestres" style="width:80%; margin:auto; margin-bottom:20px;">
+  <ion-card *ngFor = "let semestre of semestres" style="width:100%; margin:auto; margin-bottom:20px;">
     <ion-card-header>
       <ion-card-title>
           <ion-label>
@@ -25,35 +22,35 @@
 
     <ion-grid>
       <ion-row>
-        <ion-col>
+        <ion-col size="3" style="text-align:center;">
           Materia
         </ion-col>
-        <ion-col>
+        <ion-col size="3" style="text-align:center;">
           Créditos
         </ion-col>
-        <ion-col>
+        <ion-col size="3" style="text-align:center;">
           Horas/Semana
         </ion-col>
-        <ion-col>
+        <ion-col size="3" style="text-align:center;">
           Requisitos
         </ion-col>
       </ion-row>
       
       <ion-row *ngFor = "let materia of semestre.materias">
-        <ion-col>
-          materia.nombre
+        <ion-col size="3">
+          {{materia.nombre}}
         </ion-col>
-        <ion-col>
-          materia.creditos
+        <ion-col size="3" style="text-align:center;">
+          {{materia.creditos}}
         </ion-col>
-        <ion-col>
-          materia.horas
+        <ion-col size="3" style="text-align:center;">
+          {{materia.horas}}
         </ion-col>
-        <ion-col>
+        <ion-col size="3">
           <ion-list>
-            <ion-item *ngFor = "let requisito of materia.requisito">
+            <ion-item *ngFor = "let requisito of materia.requisitos">
               <ion-label>
-                requisito.materia
+                {{requisito.materia}}
               </ion-label>
             </ion-item>
           </ion-list>
