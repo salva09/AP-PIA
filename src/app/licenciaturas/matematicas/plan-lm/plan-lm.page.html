@@ -14,5 +14,51 @@
 </ion-header>
 
 <ion-content>
+  <ion-card *ngFor = "let semestre of semestres" style="width:80%; margin:auto; margin-bottom:20px;">
+    <ion-card-header>
+      <ion-card-title>
+          <ion-label>
+              {{semestre.numero}}
+          </ion-label>
+      </ion-card-title>
+    </ion-card-header>
 
+    <ion-grid>
+      <ion-row>
+        <ion-col>
+          Materia
+        </ion-col>
+        <ion-col>
+          Créditos
+        </ion-col>
+        <ion-col>
+          Horas/Semana
+        </ion-col>
+        <ion-col>
+          Requisitos
+        </ion-col>
+      </ion-row>
+      
+      <ion-row *ngFor = "let materia of semestre.materias">
+        <ion-col>
+          materia.nombre
+        </ion-col>
+        <ion-col>
+          materia.creditos
+        </ion-col>
+        <ion-col>
+          materia.horas
+        </ion-col>
+        <ion-col>
+          <ion-list>
+            <ion-item *ngFor = "let requisito of materia.requisito">
+              <ion-label>
+                requisito.materia
+              </ion-label>
+            </ion-item>
+          </ion-list>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-card>
 </ion-content>
