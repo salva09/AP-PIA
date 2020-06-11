@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {MenuController} from "@ionic/angular";
 import {Router} from "@angular/router";
+import { Howl } from 'howler';
 
 @Component({
   selector: 'app-posgrado',
@@ -18,7 +19,7 @@ export class PosgradoPage implements OnInit {
     sonido.play();
   }
 
-  posgrado = [
+  posgrados = [
     {
       nombre: "Ciencias con Orientación en Matemáticas",
       siglas: "MCOM",
@@ -27,7 +28,7 @@ export class PosgradoPage implements OnInit {
       "del mundo real, tendrán las mejores propuestas de trabajo en ocupaciones relacionadas.",
       imagen: "assets/Posgrado/Ciencias.jpeg",
       pagina: "/posgrado/cien-orien-mate",
-      audio: "assets/Licenciaturas/lm.mp3"
+      audio: "assets/Posgrado/mcom.mp3"
     },
     {
       nombre: "Ing. Física Industrial",
@@ -37,7 +38,7 @@ export class PosgradoPage implements OnInit {
       "frontera, y competitiva a nivel internacional, y con capacidad y conocimientos para desarrollar tecnología.",
       imagen: "assets/Posgrado/Ing-Fis-Ind.jpeg",
       pagina: "/posgrado/ing-fis-ind",
-      audio: "assets/Licenciaturas/lf.mp3"
+      audio: "assets/Posgrado/mifi.mp3"
     },
     {
       nombre: "Ing. en Seguridad de la Información",
@@ -48,7 +49,7 @@ export class PosgradoPage implements OnInit {
       "actualizarse en esta área de Seguridad de la Información",
       imagen: "assets/Posgrado/Seguridad.jpeg",
       pagina: "/posgrado/ing-segu-inf",
-      audio: "assets/Licenciaturas/lcc.mp3"
+      audio: "assets/Posgrado/misi.mp3"
     },
     {
       nombre: "Maestría en Astrofísica Planetaria y Tecnologías Afines",
@@ -59,7 +60,7 @@ export class PosgradoPage implements OnInit {
       "Planetarias",
       imagen: "assets/Posgrado/Astronomia.jpeg",
       pagina: "/posgrado/astrofisica",
-      audio: "assets/Licenciaturas/la.mp3"
+      audio: "assets/Posgrado/mapta.mp3"
     },
     {
       nombre: "Doctorado en Matemáticas",
@@ -69,7 +70,7 @@ export class PosgradoPage implements OnInit {
       "ante la comunidad científica nacional e internacional.",
       imagen: "assets/Posgrado/Doc-Mat.jpeg",
       pagina: "/posgrado/doc-mate",
-      audio: "assets/Licenciaturas/la.mp3"
+      audio: "assets/Posgrado/dcom.mp3"
     },
     {
       nombre: "Doctorado en Ing. Física Industrial",
@@ -79,9 +80,40 @@ export class PosgradoPage implements OnInit {
       "y competitiva a nivel internacional, y con capacidad y conocimientos para desarrollar tecnología.",
       imagen: "assets/Posgrado/Doc-Fisica.jpeg",
       pagina: "/posgrado/doc-ing-fis-ind",
-      audio: "assets/Licenciaturas/la.mp3"
+      audio: "assets/Posgrado/difi.mp3"
     },
   ]
+
+  activeAudio: String = null;
+  player: Howl = null;
+  isPlaying = false;
+
+  start(audio: String, event: any) {
+    if(this.player) {
+      this.player.stop();
+    }
+    this.player = new Howl({
+      src: [audio],
+      onplay: () => {
+        this.isPlaying = true;
+        this.activeAudio = audio;
+      },
+      onend: () => {
+        this.isPlaying = false;
+      }
+    })
+    this.player.play();
+  }
+
+  togglePlayer(pause) {
+    this.isPlaying = !pause;
+    if(pause) {
+      this.player.pause();
+    }
+    else {
+      this.player.play();
+    }
+  }
 
   ngOnInit() {
   }
