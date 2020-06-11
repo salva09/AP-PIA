@@ -136,7 +136,7 @@ export class PlanLMPage implements OnInit {
           horas: "1",
           requisitos: [
             {
-              materia: "Programación estructurada"
+              materia: "Metodología de la programación"
             }
           ]
         },
@@ -488,7 +488,7 @@ export class PlanLMPage implements OnInit {
         {
           nombre: "Servicio social",
           creditos: "16",
-          horas: "",
+          horas: "2",
           requisitos: [
             {
               materia: ""
