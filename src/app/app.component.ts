@@ -87,7 +87,39 @@ export class AppComponent {
     {
       nombre: "Posgrado",
       referencia: "/posgrado",
-      icon: "school-outline"
+      icon: "school-outline",
+      children: [
+        {
+          nombre: "Ciencias con Orientación en Matemáticas",
+          referencia: "/posgrado/cien-orien-mate",
+          icon: "analytics-outline"
+        },
+        {
+          nombre: "Ing. Física Industrial",
+          referencia: "/posgrado/ing-fis-ind",
+          icon: "construct-outline"
+        },
+        {
+          nombre: "Ing. en Seguridad de la Información",
+          referencia: "/posgrado/ing-segu-inf",
+          icon: "key-outline"
+        },
+        {
+          nombre: "Maestría en Astrofísica Planetaria y Tecnologías Afines",
+          referencia: "/posgrado/astrofisica",
+          icon: "planet-outline"
+        },
+        {
+          nombre: "Doctorado en Matemáticas",
+          referencia: "/posgrado/doc-mate",
+          icon: "clipboard-outline"
+        },
+        {
+          nombre: "Doctorado en Ing. Física Industrial",
+          referencia: "/posgrado/doc-ing-fis-ind",
+          icon: "rocket-outline"
+        },
+      ]
     }
   ]
 

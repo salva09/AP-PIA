@@ -25,8 +25,8 @@ export class PosgradoPage implements OnInit {
       descripcion: "Los que tengan maestría y doctorado con conocimientos sólidos en matemáticas y una disciplina" + 
       "relacionada como ciencias computacionales o ingeniería y puedan aplicar la teoría matemática a problemas" + 
       "del mundo real, tendrán las mejores propuestas de trabajo en ocupaciones relacionadas.",
-      imagen: "assets/Licenciaturas/lm.jpg",
-      pagina: "/licenciaturas/matematicas",
+      imagen: "assets/Posgrado/Ciencias.jpeg",
+      pagina: "/posgrado/cien-orien-mate",
       audio: "assets/Licenciaturas/lm.mp3"
     },
     {
@@ -35,8 +35,8 @@ export class PosgradoPage implements OnInit {
       descripcion: "Es un programa de posgrado con orientación e investigación, multidisciplinario, y enfocado" + 
       "en la formación de recursos humanos con una sólida preparación para realizar investigación original, de" + 
       "frontera, y competitiva a nivel internacional, y con capacidad y conocimientos para desarrollar tecnología.",
-      imagen: "assets/Licenciaturas/lf.jpg",
-      pagina: "/licenciaturas/fisica",
+      imagen: "assets/Posgrado/Ing-Fis-Ind.jpeg",
+      pagina: "/posgrado/ing-fis-ind",
       audio: "assets/Licenciaturas/lf.mp3"
     },
     {
@@ -46,8 +46,8 @@ export class PosgradoPage implements OnInit {
       "que profesionales de TIC’s se involucren en temas especializados de Seguridad Informática, y consideramos" + 
       "que es necesario un posgrado que permita a los profesionales en Tecnologías de Información el poder" + 
       "actualizarse en esta área de Seguridad de la Información",
-      imagen: "assets/Licenciaturas/lcc.jpg",
-      pagina: "/licenciaturas/ciencias-computacionales",
+      imagen: "assets/Posgrado/Seguridad.jpeg",
+      pagina: "/posgrado/ing-segu-inf",
       audio: "assets/Licenciaturas/lcc.mp3"
     },
     {
@@ -57,8 +57,8 @@ export class PosgradoPage implements OnInit {
       "para el desarrollo de las ciencias espaciales en México. Este entorno impone la necesidad de formar recursos" + 
       "humanos especializados con capacidad para colaborar en proyectos de investigación en las áreas de la Ciencias" + 
       "Planetarias",
-      imagen: "assets/Licenciaturas/la.jpg",
-      pagina: "/licenciaturas/actuaria",
+      imagen: "assets/Posgrado/Astronomia.jpeg",
+      pagina: "/posgrado/astrofisica",
       audio: "assets/Licenciaturas/la.mp3"
     },
     {
@@ -67,8 +67,8 @@ export class PosgradoPage implements OnInit {
       descripcion: "Formar egresados con conocimientos profundos en algún área de la matemática con capacidad de" + 
       "participar en grupos de investigación en el sector público o privado y ser reconocidos por sus resusltados" + 
       "ante la comunidad científica nacional e internacional.",
-      imagen: "assets/Licenciaturas/la.jpg",
-      pagina: "/licenciaturas/actuaria",
+      imagen: "assets/Posgrado/Doc-Mat.jpeg",
+      pagina: "/posgrado/doc-mate",
       audio: "assets/Licenciaturas/la.mp3"
     },
     {
@@ -77,8 +77,8 @@ export class PosgradoPage implements OnInit {
       descripcion: "Programa de posgrado con orientación e investigación, multidisciplinario, y enfocado en la" + 
       "formación de recursos humanos con una sólida preparación para realizar investigación original, de frontera," + 
       "y competitiva a nivel internacional, y con capacidad y conocimientos para desarrollar tecnología.",
-      imagen: "assets/Licenciaturas/la.jpg",
-      pagina: "/licenciaturas/actuaria",
+      imagen: "assets/Posgrado/Doc-Fisica.jpeg",
+      pagina: "/posgrado/doc-ing-fis-ind",
       audio: "assets/Licenciaturas/la.mp3"
     },
   ]

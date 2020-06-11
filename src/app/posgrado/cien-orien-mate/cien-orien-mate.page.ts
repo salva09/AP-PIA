@@ -17,9 +17,9 @@ export class CienOrienMatePage implements OnInit {
       "investigación e inició actividades en agosto de 2010 bajo la modalidad escolarizada o presencial" + 
       "semestral. Actualmente se tienen tres líneas de investigación en las cuales se realiza investigación:<br><br>" +
       
-      "• Métodos Matemáticos de Control<br>" +
-      "• Optimización<br>" +
-      "• Modelado Matemático<br>",
+      "•Métodos Matemáticos de Control<br>" +
+      "•Optimización<br>" +
+      "•Modelado Matemático<br>",
     },
     {
       titulo:"¿POR QUÉ ESTUDIAR UN POSGRADO EN MATEMÁTICAS?",
@@ -35,7 +35,7 @@ export class CienOrienMatePage implements OnInit {
       
       "Los que tengan maestría y doctorado con conocimientos sólidos en matemáticas y una disciplina relacionada como "+
       "ciencias computacionales o ingeniería y puedan aplicar la teoría matemática a problemas del mundo real, tendrán "+
-      "las mejores propuestas de trabajo en ocupaciones relacionadas.” Occupational Outlook Handbook,Bureau of Labor "+
+      "las mejores propuestas de trabajo en ocupaciones relacionadas.” Occupational Outlook Handbook, Bureau of Labor "+
       "Statistics, USA. 2008-2009",
     },
     {
@@ -45,18 +45,18 @@ export class CienOrienMatePage implements OnInit {
 
       "Los atributos deseables del estudiante son:<br><br>" +
       
-      "• Tener conocimientos básicos de la matemática superior. En particular de Álgebra lineal, Cálculo Diferencial e Integral, Cálculo vectorial.<br>"+
-      "• Tener   dominio de herramientas informáticas y del idioma inglés.<br>"+
-      "• Tener  habilidades de razonamiento lógico matemático.<br>"+
-      "• Ser  proactivo, motivado, emprendedor y con deseos de superación.<br>"
+      "•Tener conocimientos básicos de la matemática superior. En particular de Álgebra lineal, Cálculo Diferencial e Integral, Cálculo vectorial.<br>"+
+      "•Tener   dominio de herramientas informáticas y del idioma inglés.<br>"+
+      "•Tener  habilidades de razonamiento lógico matemático.<br>"+
+      "•Ser proactivo, motivado, emprendedor y con deseos de superación.<br>"
     },
     {
       titulo:"Perfil de Egresado:",
       icon: "play-outline",
-      texto: "• El alumno conocerá en forma amplia los fundamentos matemáticos con el fin de comprender las teorías y métodos matemáticos más utilizados en la solución de problemas de otras áreas de ciencias y tecnología.<br>"+
-      "• El alumno será capaz de diseñar, evaluar, implementar y analizar de forma adecuada modelos matemáticos basados en las teorías matemáticas y científicas conocidas, para mejorar la comprensión y facilitar la solución de problemas reales en ciencia y tecnología en empresas, industrias o centros de educación superior, usando herramientas computacionales.<br>"+
-      "• El alumno será capaz de comunicar de forma eficiente su conocimiento o los resultados de sus investigaciones a otras personas (expertos en el área, alumnos u otros colaboradores).<br>"+
-      "• El alumno será un colaborador responsable y efectivo en equipos multidisciplinarios aportando sus conocimientos matemáticos para el cumplimiento de los objetivos de los proyectos en empresas, industrias y centros educativos.<br>"
+      texto: "•El alumno conocerá en forma amplia los fundamentos matemáticos con el fin de comprender las teorías y métodos matemáticos más utilizados en la solución de problemas de otras áreas de ciencias y tecnología.<br>"+
+      "•El alumno será capaz de diseñar, evaluar, implementar y analizar de forma adecuada modelos matemáticos basados en las teorías matemáticas y científicas conocidas, para mejorar la comprensión y facilitar la solución de problemas reales en ciencia y tecnología en empresas, industrias o centros de educación superior, usando herramientas computacionales.<br>"+
+      "•El alumno será capaz de comunicar de forma eficiente su conocimiento o los resultados de sus investigaciones a otras personas (expertos en el área, alumnos u otros colaboradores).<br>"+
+      "•El alumno será un colaborador responsable y efectivo en equipos multidisciplinarios aportando sus conocimientos matemáticos para el cumplimiento de los objetivos de los proyectos en empresas, industrias y centros educativos.<br>"
     }
 
   ]

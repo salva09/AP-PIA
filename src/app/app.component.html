@@ -11,7 +11,7 @@
 
     <ion-content>
       <div *ngFor="let pagina of paginas">
-        <ion-menu-toggle *ngIf= "pagina.nombre != 'Licenciaturas'">
+        <ion-menu-toggle *ngIf= "pagina.nombre != 'Licenciaturas' && pagina.nombre != 'Posgrado'">
           <ion-item [routerLink]="pagina.referencia" routerDirection="root" routerLinkActive="active">
             <ion-label>
               <ion-icon [name]="pagina.icon"></ion-icon>
@@ -20,7 +20,7 @@
           </ion-item>
         </ion-menu-toggle>
 
-        <ion-item *ngIf="pagina.nombre == 'Licenciaturas'"
+        <ion-item *ngIf="pagina.nombre == 'Licenciaturas' || pagina.nombre == 'Posgrado'"
                 [class.active-parent]="pagina.open"
                 button>
           <ion-menu-toggle [routerLink]="pagina.referencia" routerDirection="root" routerLinkActive="active">
@@ -42,7 +42,7 @@
             </ion-item>
           </ion-menu-toggle>
         </ion-list>
-      </div>
+      </div>     
     </ion-content>
   </ion-menu>
 

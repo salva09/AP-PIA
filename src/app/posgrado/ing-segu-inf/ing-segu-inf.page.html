@@ -1,9 +1,26 @@
-<ion-header>
+<ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>ing-segu-inf</ion-title>
+    <ion-buttons slot="start">
+      <ion-menu-button autoHide="false"></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Ing. en Seguridad de la Información</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
+  <ion-img src="assets/Posgrado/Seguridad.jpeg" style="width:70%; margin:auto; margin-bottom:20px;"></ion-img>
 
-</ion-content>
+  <ion-card *ngFor = "let seccion of secciones" style="width:80%; margin:auto; margin-bottom:20px;">
+    <ion-card-header>
+        <ion-card-title>
+            <ion-icon [name]="seccion.icon"></ion-icon>
+            <ion-label>
+                {{ seccion.titulo }}
+            </ion-label>
+        </ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content style="text-align:justify;">
+        <div [innerHtml] = "seccion.texto"></div>
+    </ion-card-content>
+</ion-card>

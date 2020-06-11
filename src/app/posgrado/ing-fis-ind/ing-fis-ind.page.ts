@@ -28,18 +28,18 @@ export class IngFisIndPage implements OnInit {
 
       "Los atributos deseables del estudiante son:<br><br>" +
       
-      "• Poseer conocimientos y habilidades en matemáticas y física, las cuales serán evaluadas mediante un examen escrito.<br>"+
-      "• Poseer actitudes de interés por la investigación científica y desarrollo de nuevas tecnologías.<br>"
+      "•Poseer conocimientos y habilidades en matemáticas y física, las cuales serán evaluadas mediante un examen escrito.<br>"+
+      "•Poseer actitudes de interés por la investigación científica y desarrollo de nuevas tecnologías.<br>"
     },
     {
       titulo:"Perfil de Egresado:",
       icon: "play-outline",
-      texto: "• Desarrollará trabajos de investigación en física aplicada.<br>"+
-      "• Propondrá  proyectos de investigación en física básica.<br>"+
-      "• Participará en la solución de problemas de la producción en el sector industrial.<br>"+
-      "• Trabajará en grupos de investigación en la industria.<br>"+
-      "• Desempeñará labores docentes de alto nivel en el área de la ingeniería física que haya seleccionado. "+
-      "• Continuará estudios de doctorado en física o ingeniería física."
+      texto: "•Desarrollará trabajos de investigación en física aplicada.<br>"+
+      "•Propondrá  proyectos de investigación en física básica.<br>"+
+      "•Participará en la solución de problemas de la producción en el sector industrial.<br>"+
+      "•Trabajará en grupos de investigación en la industria.<br>"+
+      "•Desempeñará labores docentes de alto nivel en el área de la ingeniería física que haya seleccionado. "+
+      "•Continuará estudios de doctorado en física o ingeniería física."
     }
 
   ]
