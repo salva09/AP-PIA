@@ -24,17 +24,21 @@ export class ContactoPage implements OnInit {
 
   forma: FormGroup = null;
   foto: any;
+  fotoCorreo: any;
 
   hacerFoto() {
     const options: CameraOptions = {
-      sourceType: this.camera.PictureSourceType.CAMERA,
-      destinationType: this.camera.DestinationType.FILE_URI
+      quality: 100,
+      destinationType: this.camera.DestinationType.FILE_URI,
+      encodingType: this.camera.EncodingType.JPEG,
+      mediaType: this.camera.MediaType.PICTURE
     };
 
     this.camera.getPicture(options).then((imageData) => {
-      this.foto = imageData;
+      this.fotoCorreo = imageData;
+      this.foto = 'data:image/jpeg:base64,' + imageData;
     }, (err) => {
-      console.log(err);
+      alert(err);
     });
   }
 
@@ -49,7 +53,7 @@ export class ContactoPage implements OnInit {
       to: 'sylnne.21@gmail.com',
       cc: this.forma.value.email,
       attachments: [
-        this.foto
+        this.fotoCorreo
       ],
       subject: 'Suicidio masivo en la facu',
       nombre: this.forma.value.nombre,
