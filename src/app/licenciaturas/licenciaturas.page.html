@@ -11,19 +11,19 @@
 </ion-header>
 
 <ion-content>
-  <ion-card *ngFor = "let licenciatura of licenciaturas">
+  <ion-card *ngFor="let licenciatura of licenciaturas">
     <ion-card-header style="text-align:center;">
       <ion-card-title>
         {{ licenciatura.nombre }}
       </ion-card-title>
     </ion-card-header>
-    
+
     <ion-card-content style="text-align:justify;">
-      <ion-img [src] = "licenciatura.imagen"></ion-img>
+      <ion-img [src]="licenciatura.imagen"></ion-img>
 
       <p><b>Objetivo: </b><br></p>
       {{ licenciatura.descripcion }}
-      
+
       <ion-button [routerLink]="licenciatura.pagina">
         <ion-icon name="bulb-outline" slot="start"></ion-icon>
         Conoce Más
@@ -51,8 +51,8 @@
           <ion-icon slot="icon-only" name="stop"></ion-icon>
         </ion-button>
       </ion-footer>
-      
+
     </ion-card-content>
   </ion-card>
-  
+
 </ion-content>

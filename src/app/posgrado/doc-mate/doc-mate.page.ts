@@ -7,7 +7,6 @@ import { AnimacionService } from '../../servicios/animacion.service';
   styleUrls: ['./doc-mate.page.scss'],
 })
 export class DocMatePage implements OnInit {
-
   constructor(
     private animacion: AnimacionService
   ) {
@@ -67,9 +66,8 @@ export class DocMatePage implements OnInit {
         "• El alumno será capaz de comunicar de forma eficiente su conocimiento o los resultados de sus investigaciones a otras personas (expertos en el área, alumnos u otros colaboradores).<br>" +
         "• El alumno será un colaborador responsable y efectivo en equipos multidisciplinarios aportando sus conocimientos matemáticos para el cumplimiento de los objetivos de los proyectos en empresas, industrias y centros educativos.<br>"
     }
-
   ]
+
   ngOnInit() {
   }
-
 }

@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { MenuController } from "@ionic/angular";
 import { Howl } from 'howler';
 
 @Component({
@@ -9,13 +8,17 @@ import { Howl } from 'howler';
 })
 export class LicenciaturasPage implements OnInit {
 
-  constructor(private menu: MenuController) { }
+  constructor(
+
+  ) {
+
+  }
 
   licenciaturas = [
     {
       nombre: "Licenciatura en Matemáticas",
       siglas: "LM",
-      descripcion: "Formar profesionales de las Matemáticas, con capacidad para integrar conocimientos y colaborar en la " + 
+      descripcion: "Formar profesionales de las Matemáticas, con capacidad para integrar conocimientos y colaborar en la " +
         "solución de los diversos problemas específicos, fomentando el desarrollo de la comunidad, en los aspectos de docencia " +
         "e investigación básica y aplicada.",
       imagen: "assets/Licenciaturas/lm.jpg",
@@ -25,7 +28,7 @@ export class LicenciaturasPage implements OnInit {
     {
       nombre: "Licenciatura en Física",
       siglas: "LF",
-      descripcion: "Formar profesionales con una preparación general en el área de las ciencias físicas, que les permita " + 
+      descripcion: "Formar profesionales con una preparación general en el área de las ciencias físicas, que les permita " +
         "participar en el desarrollo científico, tecnológico, docencia e investigación para la sociedad.",
       imagen: "assets/Licenciaturas/lf.jpg",
       pagina: "/licenciaturas/fisica",
@@ -74,7 +77,7 @@ export class LicenciaturasPage implements OnInit {
   isPlaying = false;
 
   start(audio: String, event: any) {
-    if(this.player) {
+    if (this.player) {
       this.player.stop();
     }
     this.player = new Howl({
@@ -92,7 +95,7 @@ export class LicenciaturasPage implements OnInit {
 
   togglePlayer(pause) {
     this.isPlaying = !pause;
-    if(pause) {
+    if (pause) {
       this.player.pause();
     }
     else {
@@ -108,5 +111,4 @@ export class LicenciaturasPage implements OnInit {
 
   ngOnInit() {
   }
-
 }

@@ -9,11 +9,11 @@ import { FormBuilder, Validators, FormGroup } from "@angular/forms";
   styleUrls: ['./contacto.page.scss'],
 })
 export class ContactoPage implements OnInit {
-
-  ngOnInit() {
-  }
-
-  constructor(private camera: Camera, public composer: EmailComposer, private formBuilder: FormBuilder) {
+  constructor(
+    private camera: Camera,
+    public composer: EmailComposer,
+    private formBuilder: FormBuilder
+  ) {
     this.forma = this.formBuilder.group({
       nombre: ['', Validators.compose([Validators.required, Validators.pattern('[a-zA-Z ]*')])],
       edad: ['', Validators.compose([Validators.required, Validators.pattern('[0-9]*')])],
@@ -29,7 +29,7 @@ export class ContactoPage implements OnInit {
     const options: CameraOptions = {
       sourceType: this.camera.PictureSourceType.CAMERA,
       destinationType: this.camera.DestinationType.FILE_URI,
-      
+
     };
 
     this.camera.getPicture(options).then((imageData) => {
@@ -62,5 +62,8 @@ export class ContactoPage implements OnInit {
     };
 
     this.composer.open(email);
+  }
+
+  ngOnInit() {
   }
 }

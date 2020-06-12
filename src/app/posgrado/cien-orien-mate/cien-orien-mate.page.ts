@@ -7,7 +7,6 @@ import { AnimacionService } from '../../servicios/animacion.service';
   styleUrls: ['./cien-orien-mate.page.scss'],
 })
 export class CienOrienMatePage implements OnInit {
-
   constructor(
     private animacion: AnimacionService
   ) {
@@ -69,7 +68,7 @@ export class CienOrienMatePage implements OnInit {
     }
 
   ]
+
   ngOnInit() {
   }
-
 }

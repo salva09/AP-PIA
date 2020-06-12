@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { MenuController } from '@ionic/angular';
 import { AnimacionService } from '../../servicios/animacion.service';
 
 @Component({
@@ -8,9 +7,7 @@ import { AnimacionService } from '../../servicios/animacion.service';
   styleUrls: ['./matematicas.page.scss'],
 })
 export class MatematicasPage implements OnInit {
-
   constructor(
-    private menu: MenuController,
     private animacion: AnimacionService
   ) {
 
@@ -87,5 +84,4 @@ export class MatematicasPage implements OnInit {
 
   ngOnInit() {
   }
-
 }

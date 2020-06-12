@@ -7,7 +7,6 @@ import { AnimacionService } from '../../servicios/animacion.service';
   styleUrls: ['./ing-segu-inf.page.scss'],
 })
 export class IngSeguInfPage implements OnInit {
-
   constructor(
     private animacion: AnimacionService
   ) {
@@ -60,7 +59,7 @@ export class IngSeguInfPage implements OnInit {
     }
 
   ]
+
   ngOnInit() {
   }
-
 }

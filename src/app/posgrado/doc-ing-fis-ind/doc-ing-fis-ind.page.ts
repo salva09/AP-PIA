@@ -7,8 +7,6 @@ import { AnimacionService } from '../../servicios/animacion.service';
   styleUrls: ['./doc-ing-fis-ind.page.scss'],
 })
 export class DocIngFisIndPage implements OnInit {
-
-
   constructor(
     private animacion: AnimacionService
   ) {
@@ -18,7 +16,6 @@ export class DocIngFisIndPage implements OnInit {
   animarFlecha(seccion) {
     this.animacion.animateArrow(seccion);
   }
-
 
   secciones = [
     {
@@ -54,7 +51,7 @@ export class DocIngFisIndPage implements OnInit {
     }
 
   ]
+
   ngOnInit() {
   }
-
 }

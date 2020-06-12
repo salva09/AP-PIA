@@ -7,7 +7,6 @@ import { AnimacionService } from '../../servicios/animacion.service';
   styleUrls: ['./astrofisica.page.scss'],
 })
 export class AstrofisicaPage implements OnInit {
-
   constructor(
     private animacion: AnimacionService
   ) {
@@ -34,5 +33,4 @@ export class AstrofisicaPage implements OnInit {
   ]
   ngOnInit() {
   }
-
 }
