@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Camera, CameraOptions } from '@ionic-native/camera/ngx'
+import { Camera, CameraOptions } from '@ionic-native/camera/ngx';
 import { EmailComposer } from '@ionic-native/email-composer/ngx';
 import { FormBuilder, Validators, FormGroup } from "@angular/forms";
 
@@ -31,7 +31,8 @@ export class ContactoPage implements OnInit {
       targetWidth: 1000,
       targetHeight: 1000,
       quality: 100
-    }
+    };
+
     this.camera.getPicture(options).then((imageData) => {
       this.foto = 'data:image/jpeg;base64,' + imageData;
     }, (err) => {
@@ -48,6 +49,7 @@ export class ContactoPage implements OnInit {
   sendForm() {
     let email = {
       to: 'sylnne.21@gmail.com',
+      cc: this.forma.value.email,
       subject: 'Suicidio masivo en la facu',
       nombre: this.forma.value.nombre,
       comentario: this.forma.value.comentario,
@@ -59,7 +61,8 @@ export class ContactoPage implements OnInit {
 
       app: "Gmail",
       isHtml: true
-    }
+    };
+
     this.composer.open(email);
   }
 }
