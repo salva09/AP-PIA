@@ -12,25 +12,25 @@
 <!-- No se si lo del formulario iba en contacto xD - SILVIA -->
 <ion-content>
     <ion-card>
-            <form>
+            
                 <ion-list>
                     <br>
                     <ion-item>
                         <ion-label position="floating">Nombre</ion-label>
                         <br>
-                        <ion-input  [(ngModel)]="nombre" required type="text" name="nombre" clearInput="true"></ion-input>
+                        <ion-input  [(ngModel)]="nombre" required type="text"  clearInput="true"></ion-input>
                     </ion-item>
                     <br>
                     <ion-item>
                         <ion-label position="floating">Edad</ion-label>
                         <br>
-                        <ion-input  [(ngModel)]="edad" required type="numeric" name="numeric" clearInput="true"></ion-input>
+                        <ion-input  [(ngModel)]="edad" required type="numeric"  clearInput="true"></ion-input>
                     </ion-item>
                     <br>
                     <ion-item>
                         <ion-label position="floating">E-Mail<ion-text color="danger">*</ion-text></ion-label>
                         <br>
-                        <ion-input  [(ngModel)]="mail" required type="email" name="email" clearInput="true"></ion-input>
+                        <ion-input  [(ngModel)]="mail" required type="email"  clearInput="true"></ion-input>
                     </ion-item>
                     <br>
                     <ion-item>
@@ -47,6 +47,6 @@
                     </ion-card-content>
                 </ion-card>
                 <ion-button (click)="SendForm()" expand="block" type="submit" class="ion-no-margin">Enviar datos</ion-button>
-            </form>
+ 
     </ion-card>
 </ion-content>
