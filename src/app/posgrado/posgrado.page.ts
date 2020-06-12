@@ -115,6 +115,12 @@ export class PosgradoPage implements OnInit {
     }
   }
 
+  stop() {
+    this.player.pause();
+    this.isPlaying = false;
+    this.activeAudio = null;
+  }
+
   ngOnInit() {
   }
 

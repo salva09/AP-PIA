@@ -100,6 +100,12 @@ export class LicenciaturasPage implements OnInit {
     }
   }
 
+  stop() {
+    this.player.stop();
+    this.isPlaying = false;
+    this.activeAudio = null;
+  }
+
   ngOnInit() {
   }
 
