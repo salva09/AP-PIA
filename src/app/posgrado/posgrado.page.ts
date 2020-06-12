@@ -7,11 +7,8 @@ import { Howl } from 'howler';
   styleUrls: ['./posgrado.page.scss'],
 })
 export class PosgradoPage implements OnInit {
-  constructor(
 
-  ) {
-
-  }
+  constructor() {}
 
   posgrados = [
     {
