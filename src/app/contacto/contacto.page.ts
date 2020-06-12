@@ -27,38 +27,36 @@ export class ContactoPage implements OnInit {
 
   hacerFoto() {
     const options: CameraOptions = {
-      destinationType: this.camera.DestinationType.DATA_URL,
-      targetWidth: 1000,
-      targetHeight: 1000,
-      quality: 100
+      sourceType: this.camera.PictureSourceType.CAMERA,
+      destinationType: this.camera.DestinationType.FILE_URI,
+      
     };
 
     this.camera.getPicture(options).then((imageData) => {
-      this.foto = 'data:image/jpeg;base64,' + imageData;
+      this.foto = imageData;
     }, (err) => {
       console.log(err);
     });
   }
 
   submit() {
+    this.sendForm();
     console.log(this.forma.value)
     this.forma.reset();
-    this.sendForm();
   }
 
   sendForm() {
     let email = {
       to: 'sylnne.21@gmail.com',
       cc: this.forma.value.email,
+      attachments: [
+        this.foto
+      ],
       subject: 'Suicidio masivo en la facu',
       nombre: this.forma.value.nombre,
       comentario: this.forma.value.comentario,
       body: this.forma.value.nombre + ': ' + this.forma.value.comentario +
         '<br>Edad: ' + this.forma.value.edad + '<br><br>',
-      attachments: [
-        this.foto
-      ],
-
       app: "Gmail",
       isHtml: true
     };
