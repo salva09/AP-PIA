@@ -69,9 +69,68 @@ export class PlanLSTIPage implements OnInit {
       numero: "Segundo Semestre",
       materias: [
         {
-          nombre: "",
-          creditos: "",
-          horas: "",
+          nombre: "Tópicos de álgebra",
+          creditos: "4",
+          horas: "5",
+          requisitos: [
+            {
+              materia: "Álgebra"
+            }
+          ]
+        },
+        {
+          nombre: "Cálculo integral",
+          creditos: "4",
+          horas: "5",
+          requisitos: [
+            {
+              materia: "Cálculo diferencial"
+            },
+            {
+              materia: "Álgebra"
+            },
+            {
+              materia: "Geometría analítica"
+            }
+          ]
+        },
+        {
+          nombre: "Introducción a la programación",
+          creditos: "4",
+          horas: "5",
+          requisitos: [
+            {
+              materia: "Metodología de la programación"
+            }
+          ]
+        },
+        {
+          nombre: "Matemáticas discretas",
+          creditos: "4",
+          horas: "5",
+          requisitos: [
+            {
+              materia: "Álgebra"
+            },
+            {
+              materia: "Cálculo diferencial"
+            }
+          ]
+        },
+        {
+          nombre: "Fundamentos de la seguridad informática",
+          creditos: "3",
+          horas: "3",
+          requisitos: [
+            {
+              materia: ""
+            }
+          ]
+        },
+        {
+          nombre: "Fundamentos de sistemas operativos",
+          creditos: "4",
+          horas: "5",
           requisitos: [
             {
               materia: ""
@@ -84,12 +143,62 @@ export class PlanLSTIPage implements OnInit {
       numero: "Tercer Semestre",
       materias: [
         {
-          nombre: "",
-          creditos: "",
-          horas: "",
+          nombre: "Álgebra lineal",
+          creditos: "4",
+          horas: "5",
+          requisitos: [
+            {
+              materia: "Tópicos de álgebra"
+            }
+          ]
+        },
+        {
+          nombre: "Programa de seguridad",
+          creditos: "3",
+          horas: "3",
           requisitos: [
             {
               materia: ""
+            }
+          ]
+        },
+        {
+          nombre: "Programación para ciberseguridad",
+          creditos: "4",
+          horas: "5",
+          requisitos: [
+            {
+              materia: ""
+            }
+          ]
+        },
+        {
+          nombre: "Laboratorio de programación para ciberseguridad",
+          creditos: "2",
+          horas: "2",
+          requisitos: [
+            {
+              materia: ""
+            }
+          ]
+        },
+        {
+          nombre: "Señales de transmisión",
+          creditos: "4",
+          horas: "5",
+          requisitos: [
+            {
+              materia: ""
+            }
+          ]
+        },
+        {
+          nombre: "Teoría de autómatas",
+          creditos: "4",
+          horas: "5",
+          requisitos: [
+            {
+              materia: "Estructura de datos"
             }
           ]
         }
@@ -99,9 +208,79 @@ export class PlanLSTIPage implements OnInit {
       numero: "Cuarto Semestre",
       materias: [
         {
-          nombre: "",
-          creditos: "",
-          horas: "",
+          nombre: "Criptografía",
+          creditos: "3",
+          horas: "3",
+          requisitos: [
+            {
+              materia: ""
+            }
+          ]
+        },
+        {
+          nombre: "Cultura de paz",
+          creditos: "2",
+          horas: "2",
+          requisitos: [
+            {
+              materia: ""
+            }
+          ]
+        },
+        {
+          nombre: "Fundamentos de redes",
+          creditos: "3",
+          horas: "3",
+          requisitos: [
+            {
+              materia: ""
+            }
+          ]
+        },
+        {
+          nombre: "Laboratorio de fundamentos de redes",
+          creditos: "2",
+          horas: "2",
+          requisitos: [
+            {
+              materia: ""
+            }
+          ]
+        },
+        {
+          nombre: "Normatividad y regulaciones de datos",
+          creditos: "3",
+          horas: "3",
+          requisitos: [
+            {
+              materia: ""
+            }
+          ]
+        },
+        {
+          nombre: "Seguridad en base de datos",
+          creditos: "3",
+          horas: "3",
+          requisitos: [
+            {
+              materia: ""
+            }
+          ]
+        },
+        {
+          nombre: "Laboratorio de seguridad en base de datos",
+          creditos: "2",
+          horas: "2",
+          requisitos: [
+            {
+              materia: ""
+            }
+          ]
+        },
+        {
+          nombre: "Teoría de la información",
+          creditos: "4",
+          horas: "5",
           requisitos: [
             {
               materia: ""
@@ -114,9 +293,79 @@ export class PlanLSTIPage implements OnInit {
       numero: "Quinto Semestre",
       materias: [
         {
-          nombre: "",
-          creditos: "",
-          horas: "",
+          nombre: "Administración de riesgos de seguridad",
+          creditos: "3",
+          horas: "3",
+          requisitos: [
+            {
+              materia: ""
+            }
+          ]
+        },
+        {
+          nombre: "Conmutación de redes locales",
+          creditos: "3",
+          horas: "3",
+          requisitos: [
+            {
+              materia: ""
+            }
+          ]
+        },
+        {
+          nombre: "Laboratorio de conmutación de redes locales",
+          creditos: "2",
+          horas: "2",
+          requisitos: [
+            {
+              materia: ""
+            }
+          ]
+        },
+        {
+          nombre: "Ética y cultura de la legalidad",
+          creditos: "2",
+          horas: "2",
+          requisitos: [
+            {
+              materia: ""
+            }
+          ]
+        },
+        {
+          nombre: "Optativa I área curricular de formación profesional fundamental",
+          creditos: "4",
+          horas: "4",
+          requisitos: [
+            {
+              materia: ""
+            }
+          ]
+        },
+        {
+          nombre: "Seguridad en aplicaciones ",
+          creditos: "3",
+          horas: "3",
+          requisitos: [
+            {
+              materia: ""
+            }
+          ]
+        },
+        {
+          nombre: "Laboratorio de seguridad en aplicaciones",
+          creditos: "2",
+          horas: "2",
+          requisitos: [
+            {
+              materia: ""
+            }
+          ]
+        },
+        {
+          nombre: "Teoría de la información aplicada",
+          creditos: "4",
+          horas: "5",
           requisitos: [
             {
               materia: ""
@@ -141,7 +390,7 @@ export class PlanLSTIPage implements OnInit {
       ]
     },
     {
-      numero: "Septimo Semestre",
+      numero: "Séptimo Semestre",
       materias: [
         {
           nombre: "",

@@ -405,7 +405,7 @@ export class PlanLMPage implements OnInit {
       ]
     },
     {
-      numero: "Septimo Semestre",
+      numero: "Séptimo Semestre",
       materias: [
         {
           nombre: "Tópicos de análisis matemático",

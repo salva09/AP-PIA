@@ -472,7 +472,7 @@ export class PlanLCCPage implements OnInit {
         {
           nombre: "Liderazgo, emprendimiento e innovación",
           creditos: "2",
-          horas: "1",
+          horas: "2",
           requisitos: [
             {
               materia: ""
@@ -548,7 +548,7 @@ export class PlanLCCPage implements OnInit {
       ]
     },
     {
-      numero: "Septimo Semestre",
+      numero: "Séptimo Semestre",
       materias: [
         {
           nombre: "Sistemas operativos",
