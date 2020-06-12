@@ -1,0 +1,447 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button autoHide="false"></ion-menu-button>
+    </ion-buttons>
+
+    <ion-title>
+      Explorar
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-header>
+    <ion-toolbar>
+      <ion-title size="large" style="text-align:center;">
+        <ion-icon name="calculator-sharp"></ion-icon>
+        FCFM
+      </ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-toolbar>
+    <ion-segment [(ngModel)]="conoceMas">
+      <ion-segment-button value="servicios">
+        <ion-label>Servicios</ion-label>
+      </ion-segment-button>
+      <ion-segment-button value="actividades">
+        <ion-label>Actividades</ion-label>
+      </ion-segment-button>
+      <ion-segment-button value="mapa">
+        <ion-label>Infraestructura</ion-label>
+      </ion-segment-button>
+    </ion-segment>
+  </ion-toolbar>
+
+  <div [ngSwitch]="conoceMas">
+    <ion-list *ngSwitchCase="'servicios'">
+
+      <!--Escolar-->
+      <ion-card>
+        <ion-card-header>
+          <ion-img
+            src="http://www.fcfm.uanl.mx/sites/default/files/styles/imagen_articulo/public/FF4A9561.JPG?itok=EXo1SFfk">
+          </ion-img>
+        </ion-card-header>
+        <ion-card-content>
+          <ion-title style="text-align:center;">Escolar</ion-title>
+          <ion-label><b>Servicios:<br></b></ion-label>
+          <ion-slides>
+            <ion-slide>
+              Atencion en ventanilla, telefono y/o medios electronicos de las solicitudes
+              de informacion referentes a la FCFM y/o UANL.
+            </ion-slide>
+            <ion-slide>
+              Proveer la logistica y su operacion para la aplicacion del examen de concurso
+              de primer ingreso a la FCFM.
+            </ion-slide>
+            <ion-slide>
+              Capturar los horarios de clase para permitir el proceso de inscripcion de reingreso
+              y nuevo ingreso, asi como los cambios de horario posteriores.
+            </ion-slide>
+            <ion-slide>
+              Emision de papeleria oficial requerida por los alumnos y/o maestros comprobatorios
+              de sus actividades y/o status dentro de la FCFM.
+            </ion-slide>
+            <ion-slide>
+              Proporcionar informacion oficial requerida por los otros departamentos de la FCFM
+              y/o UANL.
+            </ion-slide>
+            <ion-slide>
+              Proporcionar el tramite de titulacion a los alumnos inscritos en la FCFM.
+            </ion-slide>
+            <ion-slide>
+              Proporcionar tramite "Baja Voluntaria con Derecho" a los alumnos inscritos en la FCFM.
+            </ion-slide>
+            <ion-slide>
+              Proveer a los estudiantes con la informacion necesaria para que realicen su Regularizacion
+              y, si es el caso, llevarla a cabo a expresa solicitud.
+            </ion-slide>
+            <ion-slide>
+              Realizar las actividades pertinentes para que los alumnos de Posgrado realicen su inscripcion
+              o reinscripcion.
+            </ion-slide>
+            <ion-slide>
+              A solicitud del interesado, proporcionar el tramite de examen de grado solo en caso de Posgrado.
+            </ion-slide>
+            <ion-slide>
+              Apoyar para la inscripcion a los periodos inter-semestrales.
+            </ion-slide>
+          </ion-slides>
+          <ion-label><b>Horario:</b><br>Lunes a Viernes de 8:00 a 20:00 hrs</ion-label>
+        </ion-card-content>
+      </ion-card>
+
+      <!--Tesoreria-->
+      <ion-card>
+        <ion-card-header>
+          <ion-img
+            src="http://www.fcfm.uanl.mx/sites/default/files/styles/imagen_articulo/public/FF4A9695.JPG?itok=IPDYwDhY">
+          </ion-img>
+        </ion-card-header>
+        <ion-card-content>
+          <ion-title style="text-align:center;">Tesoreria</ion-title>
+          <ion-label><b>Servicios: </b></ion-label>
+          <ul>
+            <li>
+              Recepcion de Cobros
+            </li>
+            <li>
+              Tramite de Facturas
+            </li>
+            <li>
+              Atencion a Clientes
+            </li>
+            <li>
+              Pago a Proovedores
+            </li>
+          </ul>
+          <ion-label><b>Horario:</b><br>Lunes a Viernes de 8:30 a 14:30 y de 15:00 a 20:00 hrs</ion-label>
+        </ion-card-content>
+      </ion-card>
+
+      <!--Biblioteca-->
+      <ion-card>
+        <ion-card-header>
+          <ion-img
+            src="https://lh3.googleusercontent.com/proxy/N9afqO33whEcHsShqV006usoXbyT7iQOEle8N6ZLJUO9PMrnGSYtFgVfd9uu5iIrDtgcAXtzJ9LSZacqOmITrZTpbEXNmJAIDp8D_oyaKr8gyHLwU2C2CahKrpCyrNuaXQ">
+          </ion-img>
+        </ion-card-header>
+        <ion-card-content>
+          <ion-title style="text-align:center;">Biblioteca</ion-title>
+          <ion-label><b>Cuenta actualmente con un acervo en estanteria abierta organizado en tres áreas:</b></ion-label>
+          <br><br>
+          <div>
+            <ion-slides>
+              <ion-slide>
+                <ion-label><u>Consulta:</u> Enciclopedias, diccionarios, manuales, materiales en reserva, entre otros.
+                </ion-label>
+              </ion-slide>
+              <ion-slide>
+                <ion-label><u>Tesis:</u> En las areas de Fisica, Matematicas y Computacion.</ion-label>
+              </ion-slide>
+              <ion-slide>
+                <ion-label><u>Acervo Bibliografico:</u> En Fisica, Matematicas, Computacion, Culturales, Administracion,
+                  Publicaciones Periodicas, entre otras</ion-label>
+              </ion-slide>
+            </ion-slides>
+          </div>
+          <ion-label><b>Servicios: </b></ion-label>
+          <ul>
+            <li>
+              Prestamo en Sala
+            </li>
+            <li>
+              Prestamo a Domicilio
+            </li>
+            <li>
+              Prestamo a Copias
+            </li>
+            <li>
+              Prestamo Interbibliotecario
+            </li>
+          </ul>
+        </ion-card-content>
+      </ion-card>
+
+      <!--Asesorias-->
+      <ion-card>
+        <ion-card-header>
+          <ion-img
+            src="http://www.fcfm.uanl.mx/sites/default/files/styles/imagen_articulo/public/IMG_0318.JPG?itok=PoFNRBe6">
+          </ion-img>
+        </ion-card-header>
+        <ion-card-content>
+          <ion-title style="text-align:center;">Asesorias</ion-title>
+          <ion-label>
+            La Facultad de Ciencias Fisico-Matematicas ofrece el servicio de asesorias academicas, al cual pueden acudir
+            de forma gratuita
+            los estudiantes de las seis carreras impartidas en la Facultad.
+          </ion-label>
+          <ion-label><b><br><br>Servicios: </b></ion-label>
+          <ul>
+            <li>
+              <u>Asesorias:</u>
+              El departamento ofrece asesorias en las distintas asignaturas, para las seis
+              carreras que ofrece la FCFM-UANL.
+            </li>
+            <li>
+              <u>Revision de Laboratorios:</u>
+              El departamento colabora con los maestros de los dos primeros semestres en
+              la revision de laboratorios.
+            </li>
+          </ul>
+        </ion-card-content>
+      </ion-card>
+
+      <!--Desarrollo Estudiantil-->
+      <ion-card>
+        <ion-card-header>
+          <ion-img
+            src="http://www.fcfm.uanl.mx/sites/default/files/styles/imagen_articulo/public/IMG_9958.JPG?itok=FqfcHlYm">
+          </ion-img>
+        </ion-card-header>
+        <ion-card-content>
+          <ion-title style="text-align:center;">Desarrollo Estudiantil</ion-title>
+          <ion-label>
+            Este departamento tiene como funcion atender a los alumnos de la facultad orientandolos con la persona
+             o departamento indicado, para resolver cualquier problema o inquietud que tengan.
+          </ion-label>
+          <ion-label><b>Servicios: </b></ion-label>
+          <ul>
+            <li>
+              Actividades Culturales
+            </li>
+            <li>
+              Deportes
+            </li>
+            <li>
+              Intercambio Academico y Movilidad Estudiantil
+            </li>
+            <li>
+              Talentos
+            </li>
+            <li>
+              Emprendedor
+            </li>
+            <li>
+              Becas PRONABES
+            </li>
+            <li>
+              Foraneos
+            </li>
+            <li>
+              Asesorias
+            </li>
+            <li>
+              Tutorias
+            </li>
+            <li>
+              Psicologia
+            </li>
+          </ul>
+        </ion-card-content>
+      </ion-card>
+
+      <!--Programa Emprendedor-->
+      <ion-card>
+        <ion-card-header>
+          <ion-img
+            src="https://www.nerdilandia.com/wp-content/uploads/2016/07/cursos-para-emprendedores.jpg">
+          </ion-img>
+        </ion-card-header>
+        <ion-card-content>
+          <ion-title style="text-align:center;">Programa Emprendedor</ion-title>
+          <ion-label><b><br>El Emprendedor en FCFM<br></b><i>Cimentando el presente, construyendo el futuro<br><br></i></ion-label>
+          <ion-label>
+            Este programa que ofrece la Facultad de Ciencias Fisico Matematicas, tiene como eje principal al Emprendedor, el cual es creativo
+             y poseedor de un cumulo de conocimientos con base cientifica y tecnologica que, en equilibrio con su desarrollo humano y su Responsabilidad
+             social, es capaz de estructurar su proyecto de vida, ofreciendo bienes y servicios, formando empresas competitivas y detonantes del desarrollo economico regional y nacional.
+          </ion-label>
+        </ion-card-content>
+      </ion-card>
+
+      <br>
+      <ion-button expand="full" href="http://www.fcfm.uanl.mx/es/alumnosFCFM">
+        Más informacion
+      </ion-button>
+      <br>
+
+    </ion-list>
+    <ion-list *ngSwitchCase="'actividades'">
+      <ion-item-group>
+        <!--Deportes-->
+        <ion-item-divider style="background:#E5E5E5">
+          <ion-title>Deportes</ion-title>
+        </ion-item-divider>
+        <br><br>
+        <div>
+          <ion-slides>
+            <ion-slide *ngFor="let deporte of deportes">
+              <ion-avatar>
+                <ion-img [src]="deporte.imagen"></ion-img>
+              </ion-avatar>
+              <ion-label>{{deporte.nombre}}</ion-label>
+            </ion-slide>
+          </ion-slides>
+        </div>
+        <br><br>
+
+        <!--Actividades Culturales-->
+        <ion-item-divider style="background:#E5E5E5">
+          <ion-title>Actividades Culturales</ion-title>
+        </ion-item-divider>
+        <br><br>
+        <div>
+          <ion-slides>
+            <ion-slide *ngFor="let actividadCultural of actividadesCulturales">
+              <ion-avatar>
+                <ion-img [src]="actividadCultural.imagen"></ion-img>
+              </ion-avatar>
+              <ion-label>{{actividadCultural.nombre}}</ion-label>
+            </ion-slide>
+          </ion-slides>
+        </div>
+        <br><br>
+      </ion-item-group>
+
+      <ion-item-divider style="background:#E5E5E5">
+        <ion-title>AFI</ion-title>
+      </ion-item-divider>
+      <ion-card>
+        <ion-card-header>
+          <ion-img src='assets/AFI.png'></ion-img>
+        </ion-card-header>
+        <ion-card-content>
+          <ion-label>
+            Las <b>Actividades de Formacion Integral (AFI)</b> tienen la finalidad de enriquecer
+             y complementar la formacion curricular del estudiante mediante la participacion en eventos
+             y/o programas de distintas categorias o areas:
+          </ion-label>
+          <ul>
+            <li>Academicas</li>
+            <li>Investigacion</li>
+            <li>Culturales</li>
+            <li>Deportivas</li>
+            <li>Responsabilidad social</li>
+            <li>Innovacion y emprendimiento</li>
+            <li>Aprendizaje de idiomas</li>
+          </ul>
+          <a href="http://www.fcfm.uanl.mx/sites/default/files/Lineamientos_AFI_2.pdf"><ion-button expand="full">Más información</ion-button></a>
+        </ion-card-content>
+      </ion-card>
+    </ion-list>
+
+    <ion-list *ngSwitchCase="'mapa'">
+      <ion-item-divider style="background:#E5E5E5">
+        <ion-title>Ubicacion General</ion-title>
+      </ion-item-divider>
+      <br>
+      <ion-slides zoom [options]="opciones">
+        <ion-slide>
+          <div class="swiper-zoom-container">
+            <img src='assets/mapa-ubicaciongeneral.PNG' alt="">
+          </div>
+        </ion-slide>
+      </ion-slides>
+      <br>
+      <ion-item-divider style="background:#E5E5E5">
+        <ion-title>FCFM - Planta Baja</ion-title>
+      </ion-item-divider>
+      <br>
+      <ion-slides zoom [options]="opciones">
+        <ion-slide>
+          <div class="swiper-zoom-container">
+            <img src='assets/mapa-plantaBaja.PNG' alt="">
+          </div>
+        </ion-slide>
+      </ion-slides>
+      <br>
+      <ion-item-divider style="background:#E5E5E5">
+        <ion-title>FCFM - Piso 1</ion-title>
+      </ion-item-divider>
+      <br>
+      <ion-slides zoom [options]="opciones">
+        <ion-slide>
+          <div class="swiper-zoom-container">
+            <img src='assets/mapa-piso1.PNG' alt="">
+          </div>
+        </ion-slide>
+      </ion-slides>
+      <br>
+      <ion-item-divider style="background:#E5E5E5">
+        <ion-title>FCFM - Piso 2</ion-title>
+      </ion-item-divider>
+      <br>
+      <ion-slides zoom [options]="opciones">
+        <ion-slide>
+          <div class="swiper-zoom-container">
+            <img src='assets/mapa-piso2.PNG' alt="">
+          </div>
+        </ion-slide>
+      </ion-slides>
+      <br>
+      <ion-item-divider style="background:#E5E5E5">
+        <ion-title>Edificio 3 - Planta Baja</ion-title>
+      </ion-item-divider>
+      <br>
+      <ion-slides zoom [options]="opciones">
+        <ion-slide>
+          <div class="swiper-zoom-container">
+            <img src='assets/mapa-edificio3-plantabaja.PNG' alt="">
+          </div>
+        </ion-slide>
+      </ion-slides>
+      <br>
+      <ion-item-divider style="background:#E5E5E5">
+        <ion-title>Edificio 3 - Piso 1</ion-title>
+      </ion-item-divider>
+      <br>
+      <ion-slides zoom [options]="opciones">
+        <ion-slide>
+          <div class="swiper-zoom-container">
+            <img src='assets/mapa-edificio3-piso1.PNG' alt="">
+          </div>
+        </ion-slide>
+      </ion-slides>
+      <br>
+      <ion-item-divider style="background:#E5E5E5">
+        <ion-title>CSI - Planta Baja</ion-title>
+      </ion-item-divider>
+      <br>
+      <ion-slides zoom [options]="opciones">
+        <ion-slide>
+          <div class="swiper-zoom-container">
+            <img src='assets/mapa-CSI-plantabaja.PNG' alt="">
+          </div>
+        </ion-slide>
+      </ion-slides>
+      <br>
+      <ion-item-divider style="background:#E5E5E5">
+        <ion-title>CSI - Piso 1</ion-title>
+      </ion-item-divider>
+      <br>
+      <ion-slides zoom [options]="opciones">
+        <ion-slide>
+          <div class="swiper-zoom-container">
+            <img src='assets/mapa-CSI-piso1.PNG' alt="">
+          </div>
+        </ion-slide>
+      </ion-slides>
+      <br>
+      <ion-item-divider style="background:#E5E5E5">
+        <ion-title>CSI - Piso 2</ion-title>
+      </ion-item-divider>
+      <br>
+      <ion-slides zoom [options]="opciones">
+        <ion-slide>
+          <div class="swiper-zoom-container">
+            <img src='assets/mapa-CSI-piso2.PNG' alt="">
+          </div>
+        </ion-slide>
+      </ion-slides>
+      <br>
+    </ion-list>
+  </div>
+</ion-content>

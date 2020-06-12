@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { MenuController } from "@ionic/angular";
+import { AnimacionService } from '../../servicios/animacion.service';
 
 @Component({
   selector: 'app-seguridad-informatica',
@@ -7,20 +7,27 @@ import { MenuController } from "@ionic/angular";
   styleUrls: ['./seguridad-informatica.page.scss'],
 })
 export class SeguridadInformaticaPage implements OnInit {
+  constructor(
+    private animacion: AnimacionService
+  ) {
 
-  constructor(private menu: MenuController) { }
+  }
+
+  animarFlecha(seccion) {
+    this.animacion.animateArrow(seccion);
+  }
 
   secciones = [
     {
       titulo: "Misión:",
-      icon: "play-outline",
+      clase: "a",
       texto: "Formar profesionales en la Licenciatura en Seguridad en Tecnologías de Información con sentido humanista, creativo" +
         " e innovador, capaces de generar, difundir y aplicar el conocimiento para responder a las demandas del desarrollo" +
         " científico, tecnológico, económico y social de la región y del país en el contexto internacional."
     },
     {
       titulo: "Visión:",
-      icon: "play-outline",
+      clase: "b",
       texto: "La Licenciatura en Seguridad en Tecnologías de Información de la Facultad de Ciencias Físico Matemáticas (FCFM)" +
         " de la Universidad Autónoma de Nuevo León es reconocida en el año 2020 como un Programa Educativo de clase" +
         " mundial por la formación integral de profesionales planetarios, por el alto nivel de formación y reconocimiento de su" +
@@ -30,7 +37,7 @@ export class SeguridadInformaticaPage implements OnInit {
     },
     {
       titulo: "Cualidades del Aspirante:",
-      icon: "play-outline",
+      clase: "c",
       texto: "<b>El perfil requiere que el aspirante haya concluido sus estudios en el Nivel Medio Superior, y que cuente con los siguientes conocimientos:</b><br>" +
         "• Elementos básicos de aritmética, geometría, trigonometría, álgebra y lógica matemática.<br>" +
         "• Elementos básicos de computación y manejo de equipo de cómputo y conocimientos sobre la aplicación de software actualizado.<br>" +
@@ -46,7 +53,7 @@ export class SeguridadInformaticaPage implements OnInit {
     },
     {
       titulo: "Cualidades del Egresado:",
-      icon: "play-outline",
+      clase: "d",
       texto: "El Licenciado en Seguridad en Tecnologías de Información es un profesionista comprometido con la sociedad, domina " +
         "el idioma inglés, está calificado para preservar la integridad, confidencialidad y disponibilidad de la información, " +
         "implementa técnicas y utiliza herramientas con gran ética profesional para detectar, evaluar y analizar amenazas para " +
@@ -57,7 +64,7 @@ export class SeguridadInformaticaPage implements OnInit {
     },
     {
       titulo: "Campo Laboral",
-      icon: "play-outline",
+      clase: "e",
       texto: "<b>Diseñador de software</b><br>" +
         "• Desarrollador de software.<br>" +
         "• Analista de sistemas.<br>" +
@@ -84,12 +91,11 @@ export class SeguridadInformaticaPage implements OnInit {
     },
     {
       titulo: "Plan de Estudios",
-      icon: "play-outline",
-      texto: "Consulta el plan de estudios aquí: <a href=\"#\">Plan de Estudios</a>"
+      clase: "f",
+      texto: "Consulta el plan de estudios aquí: <a href=\"/licenciaturas/seguridad-informatica/plan-lsti\">Plan de Estudios</a>"
     }
   ]
 
   ngOnInit() {
   }
-
 }

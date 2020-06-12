@@ -7,7 +7,11 @@ const routes: Routes = [
   {
     path: '',
     component: SeguridadInformaticaPage
+  },  {
+    path: 'plan-lsti',
+    loadChildren: () => import('./plan-lsti/plan-lsti.module').then( m => m.PlanLSTIPageModule)
   }
+
 ];
 
 @NgModule({

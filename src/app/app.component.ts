@@ -20,6 +20,98 @@ export class AppComponent {
     this.initializeApp();
   }
 
+  paginas = [
+    {
+      nombre: 'Inicio',
+      referencia: '/home',
+      icon: 'home-outline'
+    },
+    {
+      nombre: 'Contacto',
+      referencia: '/contacto',
+      icon: 'call-outline'
+    },
+    {
+      nombre: 'Licenciaturas',
+      referencia: '/licenciaturas',
+      icon: 'book-outline',
+      children: [
+        {
+          nombre: 'Matemáticas',
+          referencia: '/licenciaturas/matematicas',
+          icon: 'calculator-outline'
+        },
+        {
+          nombre: 'Física',
+          referencia: '/licenciaturas/fisica',
+          icon: 'logo-electron'
+        },
+        {
+          nombre: 'Ciencias Computacionales',
+          referencia: '/licenciaturas/ciencias-computacionales',
+          icon: 'desktop-outline'
+        },
+        {
+          nombre: 'Actuaría',
+          referencia: '/licenciaturas/actuaria',
+          icon: 'bar-chart-outline'
+        },
+        {
+          nombre: 'Multimedia y Animación Digital',
+          referencia: '/licenciaturas/multimedia',
+          icon: 'game-controller-outline'
+        },
+        {
+          nombre: 'Seguridad Infromática',
+          referencia: '/licenciaturas/seguridad-informatica',
+          icon: 'lock-closed-outline'
+        },
+      ]
+    },
+    {
+      nombre: 'Posgrado',
+      referencia: '/posgrado',
+      icon: 'school-outline',
+      children: [
+        {
+          nombre: 'Ciencias con Orientación en Matemáticas',
+          referencia: '/posgrado/cien-orien-mate',
+          icon: 'analytics-outline'
+        },
+        {
+          nombre: 'Ing. Física Industrial',
+          referencia: '/posgrado/ing-fis-ind',
+          icon: 'construct-outline'
+        },
+        {
+          nombre: 'Ing. en Seguridad de la Información',
+          referencia: '/posgrado/ing-segu-inf',
+          icon: 'key-outline'
+        },
+        {
+          nombre: 'Maestría en Astrofísica Planetaria y Tecnologías Afines',
+          referencia: '/posgrado/astrofisica',
+          icon: 'planet-outline'
+        },
+        {
+          nombre: 'Doctorado en Matemáticas',
+          referencia: '/posgrado/doc-mate',
+          icon: 'clipboard-outline'
+        },
+        {
+          nombre: 'Doctorado en Ing. Física Industrial',
+          referencia: '/posgrado/doc-ing-fis-ind',
+          icon: 'rocket-outline'
+        },
+      ]
+    },
+    {
+      nombre: 'Explorar',
+      referencia: '/conoce-mas',
+      icon: 'compass'
+    }
+  ];
+
   animateArrow(open) {
     let animation: Animation;
     if (open) {
@@ -33,53 +125,8 @@ export class AppComponent {
           .duration(100)
           .fromTo('transform', 'rotate(0deg)', 'rotate(90deg)');
     }
-    animation.play()
+    animation.play();
   }
-
-  paginas = [
-    {
-      nombre: "Inicio",
-      referencia: "/home"
-    },
-    {
-      nombre: "Contacto",
-      referencia: "/contacto"
-    },
-    {
-      nombre: "Licenciaturas",
-      referencia: "/licenciaturas",
-      children: [
-        {
-          nombre: "Matemáticas",
-          referencia: "/licenciaturas/matematicas"
-        },
-        {
-          nombre: "Física",
-          referencia: "/licenciaturas/fisica"
-        },
-        {
-          nombre: "Ciencias Computacionales",
-          referencia: "/licenciaturas/ciencias-computacionales"
-        },
-        {
-          nombre: "Actuaría",
-          referencia: "/licenciaturas/actuaria"
-        },
-        {
-          nombre: "Multimedia y Animación Digital",
-          referencia: "/licenciaturas/multimedia"
-        },
-        {
-          nombre: "Seguridad Infromática",
-          referencia: "/licenciaturas/seguridad-informatica"
-        },
-      ]
-    },
-    {
-      nombre: "Posgrado",
-      referencia: "/posgrado"
-    }
-  ]
 
   initializeApp() {
     this.platform.ready().then(() => {

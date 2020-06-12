@@ -1,0 +1,27 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>Ing. en Seguridad de la Información</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-img src="assets/Posgrado/Seguridad.jpeg" style="width:70%; margin:auto; margin-bottom:20px;"></ion-img>
+
+  <ion-card *ngFor="let seccion of secciones" style="width:80%; margin:auto; margin-bottom:20px;">
+    <ion-card-header>
+      <ion-card-title (click)="animarFlecha(seccion)">
+        <ion-icon name="arrow-forward" [ngClass]="seccion.clase"></ion-icon>
+        <ion-label>
+          {{ seccion.titulo }}
+        </ion-label>
+      </ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content *ngIf="seccion.open" style="text-align:justify;">
+      <div [innerHtml]="seccion.texto"></div>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

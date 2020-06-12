@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {MenuController} from "@ionic/angular";
+import { AnimacionService } from '../../servicios/animacion.service';
 
 @Component({
   selector: 'app-ciencias-computacionales',
@@ -7,13 +7,20 @@ import {MenuController} from "@ionic/angular";
   styleUrls: ['./ciencias-computacionales.page.scss'],
 })
 export class CienciasComputacionalesPage implements OnInit {
+  constructor(
+    private animacion: AnimacionService
+  ) {
 
-  constructor(private menu: MenuController) {}
+  }
+
+  animarFlecha(seccion) {
+    this.animacion.animateArrow(seccion);
+  }
 
   secciones = [
     {
       titulo: "Objetivo:",
-      icon: "play-outline",
+      clase: "a",
       texto: "La formación en este nivel educativo se enfoca en la preparación para desarrollar una profesión o actividad laboral. " +
         "Es por ello que en muchos casos los estudiantes se encuentran inmersos en actividades profesionales, ya sea con un trabajo " +
         "formal que no propiamente corresponde a su área de formación.<br>" +
@@ -22,7 +29,7 @@ export class CienciasComputacionalesPage implements OnInit {
     },
     {
       titulo: "Cualidades del Aspirante:",
-      icon: "play-outline",
+      clase: "b",
       texto: "El aspirante deberá demostrar las aptitudes y competencias en las áreas de pensamiento matemático, pensamiento analítico, " +
         "estructura de la lengua y comprensión lectora a través del examen EXANI-II de CENEVAL en la prueba de Admisión, adicional " +
         "a esto en la prueba de Diagnóstico, el aspirante deberá demostrar las competencias disciplinares del módulo de Ingenierías y " +
@@ -34,7 +41,7 @@ export class CienciasComputacionalesPage implements OnInit {
     },
     {
       titulo: "Cualidades del Egresado:",
-      icon: "play-outline",
+      clase: "c",
       texto: " Formar Licenciados en Ciencias Computacionales, con un perfil integral que les permita trabajar en equipos " +
         "multidisciplinarios; con responsabilidad y ética profesional; capaces de desarrollar tecnologías computacionales " +
         "innovadoras; analizar y diseñar soluciones tecnológicas mediante la utilización de modelos matemáticos; crear software " +
@@ -45,7 +52,7 @@ export class CienciasComputacionalesPage implements OnInit {
     },
     {
       titulo: "Campo Laboral",
-      icon: "play-outline",
+      clase: "d",
       texto: "<b>Áreas Laborales</b><br>" +
         "Departamento de Sistemas, Desarrollo de Software, Tecnologías de la Información o Soporte Tecnológico de instituciones " +
         "públicas y privadas en general: <br><br>" +
@@ -68,12 +75,11 @@ export class CienciasComputacionalesPage implements OnInit {
     },
     {
       titulo: "Plan de Estudios",
-      icon: "play-outline",
-      texto: "Consulta el plan de estudios aquí: <a href=\"#\">Plan de Estudios</a>"
+      clase: "e",
+      texto: "Consulta el plan de estudios aquí: <a href=\"/licenciaturas/ciencias-computacionales/plan-lcc\">Plan de Estudios</a>"
     }
   ]
 
   ngOnInit() {
   }
-
 }

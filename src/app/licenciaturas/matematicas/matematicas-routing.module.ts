@@ -7,7 +7,11 @@ const routes: Routes = [
   {
     path: '',
     component: MatematicasPage
+  },  {
+    path: 'plan-lm',
+    loadChildren: () => import('./plan-lm/plan-lm.module').then( m => m.PlanLMPageModule)
   }
+
 ];
 
 @NgModule({

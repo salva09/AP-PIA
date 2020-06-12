@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { MenuController } from "@ionic/angular";
+import { AnimacionService } from '../../servicios/animacion.service';
 
 @Component({
   selector: 'app-multimedia',
@@ -7,19 +7,26 @@ import { MenuController } from "@ionic/angular";
   styleUrls: ['./multimedia.page.scss'],
 })
 export class MultimediaPage implements OnInit {
+  constructor(
+    private animacion: AnimacionService
+  ) {
 
-  constructor(private menu: MenuController) { }
+  }
+
+  animarFlecha(seccion) {
+    this.animacion.animateArrow(seccion);
+  }
 
   secciones = [
     {
       titulo: "Objetivo:",
-      icon: "play-outline",
+      clase: "a",
       texto: "Formar profesionistas capaces de diseñar aplicaciones enfocadas a cubrir necesidades de la industria del arte digital y"+ 
       " medios interactivos, haciendo uso de TICs y arte gráfico, para los sectores público y privado."
     },
     {
       titulo: "Cualidades del Aspirante:",
-      icon: "play-outline",
+      clase: "b",
       texto: "<b>Cualidades deseables en el aspirante a ingresar a esta carrera</b><br>" +
         "• Tener interés en las TIC´s y la innovación de las expresiones gráficas.<br>"+
         "• Poseer la capacidad y habilidad para comprender, resolver y aplicar los diferentes algoritmos para el desarrollo de"+
@@ -30,7 +37,7 @@ export class MultimediaPage implements OnInit {
     },
     {
       titulo: "Cualidades del Egresado:",
-      icon: "play-outline",
+      clase: "c",
       texto: "<b>Las competencias específicas del profesional de Licenciatura en Multimedia y Animación Digital son:</b><br>"+
       "• Crear multimedia, videojuegos y animación para la promoción de ideas, de productos, de entretenimiento utilizando"+
       " herramientas de software de vanguardia para su difusión en computadora, televisión, radio y otros medios.<br>"+
@@ -51,7 +58,7 @@ export class MultimediaPage implements OnInit {
     },
     {
       titulo: "Campo Laboral",
-      icon: "play-outline",
+      clase: "d",
       texto: "<b>Áreas laborales para los egresados de esta carrera</b><br>" +
         "• Diseño y producción de videojuegos.<br>" +
         "• Animación y efectos especiales en cine y televisión.<br>" +
@@ -70,12 +77,11 @@ export class MultimediaPage implements OnInit {
     },
     {
       titulo: "Plan de Estudios",
-      icon: "play-outline",
-      texto: "Consulta el plan de estudios aquí: <a href=\"#\">Plan de Estudios</a>"
+      clase: "e",
+      texto: "Consulta el plan de estudios aquí: <a href=\"/licenciaturas/multimedia/plan-lmad\">Plan de Estudios</a>"
     }
   ]
 
   ngOnInit() {
   }
-
 }

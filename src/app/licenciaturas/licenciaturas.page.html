@@ -1,7 +1,7 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-buttons slot="start">
-      <ion-menu-button autoHide="false"></ion-menu-button>
+      <ion-menu-button (click)="togglePlayer(true)" autoHide="false"></ion-menu-button>
     </ion-buttons>
 
     <ion-title>
@@ -11,28 +11,48 @@
 </ion-header>
 
 <ion-content>
-  <ion-card *ngFor = "let licenciatura of licenciaturas" style="width:80%; display:block; margin:auto; margin-bottom:20px;">
+  <ion-card *ngFor="let licenciatura of licenciaturas">
     <ion-card-header style="text-align:center;">
       <ion-card-title>
         {{ licenciatura.nombre }}
       </ion-card-title>
     </ion-card-header>
-    
+
     <ion-card-content style="text-align:justify;">
-      <ion-img [src] = "licenciatura.imagen" style="width:90%; display:block; margin:auto; margin-bottom:10px; "></ion-img>
+      <ion-img [src]="licenciatura.imagen"></ion-img>
 
       <p><b>Objetivo: </b><br></p>
       {{ licenciatura.descripcion }}
-      <ion-button (click)="reproducir(licenciatura)" style="display:block; margin:auto; margin-top:10px;">
-        <ion-icon name="play-outline" slot="start"></ion-icon>
-        Reproducir Audio
-      </ion-button>
-      <ion-button [routerLink]="licenciatura.pagina" style="display:block; margin:auto; margin-top:10px;">
+
+      <ion-button (click)="togglePlayer(true)" [routerLink]="licenciatura.pagina">
         <ion-icon name="bulb-outline" slot="start"></ion-icon>
         Conoce Más
       </ion-button>
-      
+
+      <ion-button *ngIf="activeAudio != licenciatura.audio" (click)="start(licenciatura.audio, $event)">
+        <ion-icon name="headset-outline" slot="start"></ion-icon>
+        Reproducir Audio
+      </ion-button>
+
+      <ion-footer *ngIf="activeAudio == licenciatura.audio" class="ion-text-center">
+        <ion-button (click)="start(licenciatura.audio)">
+          <ion-icon slot="icon-only" name="reload"></ion-icon>
+        </ion-button>
+
+        <ion-button *ngIf="!isPlaying" (click)="togglePlayer(false)">
+          <ion-icon slot="icon-only" name="play"></ion-icon>
+        </ion-button>
+
+        <ion-button *ngIf="isPlaying" (click)="togglePlayer(true)">
+          <ion-icon slot="icon-only" name="pause"></ion-icon>
+        </ion-button>
+
+        <ion-button (click)="stop()">
+          <ion-icon slot="icon-only" name="stop"></ion-icon>
+        </ion-button>
+      </ion-footer>
+
     </ion-card-content>
   </ion-card>
-  
+
 </ion-content>

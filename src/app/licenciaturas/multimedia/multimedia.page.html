@@ -1,7 +1,7 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-buttons slot="start">
-      <ion-menu-button autoHide="false"></ion-menu-button>
+      <ion-back-button></ion-back-button>
     </ion-buttons>
     <ion-title>Licenciatura en Multimedia y Animación Digital</ion-title>
   </ion-toolbar>
@@ -10,17 +10,18 @@
 <ion-content>
   <ion-img src="assets/Licenciaturas/lmad.jpg" style="width:70%; margin:auto; margin-bottom:20px;"></ion-img>
 
-  <ion-card *ngFor = "let seccion of secciones" style="width:80%; margin:auto; margin-bottom:20px;">
+  <ion-card *ngFor="let seccion of secciones" style="width:80%; margin:auto; margin-bottom:20px;">
     <ion-card-header>
-        <ion-card-title>
-            <ion-icon [name]="seccion.icon"></ion-icon>
-            <ion-label>
-                {{ seccion.titulo }}
-            </ion-label>
-        </ion-card-title>
+      <ion-card-title (click)="animarFlecha(seccion)">
+        <ion-icon name="arrow-forward" [ngClass]="seccion.clase"></ion-icon>
+        <ion-label>
+          {{ seccion.titulo }}
+        </ion-label>
+      </ion-card-title>
     </ion-card-header>
 
-    <ion-card-content style="text-align:justify;">
-        <div [innerHtml] = "seccion.texto"></div>
+    <ion-card-content *ngIf="seccion.open" style="text-align:justify;">
+      <div [innerHtml]="seccion.texto"></div>
     </ion-card-content>
-</ion-card>
+  </ion-card>
+</ion-content>

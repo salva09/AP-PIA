@@ -1,3 +1,30 @@
 .my-custom-menu {
   --width: 500px;
 }
+
+ion-card {
+  display: block;
+  width: 80%;
+  margin: auto;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+ion-img {
+  width:90%;
+  display:block;
+  margin:auto;
+  margin-bottom:10px;
+}
+
+ion-button {
+  display: block;
+  margin: auto;
+  margin-top: 10px;
+}
+
+ion-footer ion-button {
+  margin-left: 5px;
+  margin-right: 5px;
+  display: inline-block;
+}

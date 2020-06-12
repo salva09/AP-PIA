@@ -7,7 +7,11 @@ const routes: Routes = [
   {
     path: '',
     component: FisicaPage
+  },  {
+    path: 'plan-lf',
+    loadChildren: () => import('./plan-lf/plan-lf.module').then( m => m.PlanLFPageModule)
   }
+
 ];
 
 @NgModule({
