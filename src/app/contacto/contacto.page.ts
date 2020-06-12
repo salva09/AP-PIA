@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Camera, CameraOptions } from '@ionic-native/camera/ngx'
+import { EmailComposer } from '@ionic-native/email-composer/ngx';
 
 @Component({
   selector: 'app-contacto',
@@ -8,9 +9,13 @@ import { Camera, CameraOptions } from '@ionic-native/camera/ngx'
 })
 export class ContactoPage implements OnInit {
 
-  constructor(private camera: Camera) {}
+  constructor(private camera: Camera, public composer:EmailComposer) {}
 
   foto: any;
+  nombre='';
+  edad='';
+  comentario='';
+  mail='';
 
   hacerFoto() {
     const options: CameraOptions = {
@@ -25,8 +30,25 @@ export class ContactoPage implements OnInit {
       console.log(err);
     });
   }
-
   ngOnInit() {
   }
+
+  SendForm(){
+    let email={
+      to: 'sylnne.21@gmail.com',
+      subject: 'Suicidio masivo en la facu',
+      nombre: this.nombre,
+      comentario: this.comentario,
+      body: this.nombre+': '+this.comentario+
+      'Edad: '+this.edad,
+        
+        
+      
+      app: "Gmail",
+      isHtml: true
+    }
+    this.composer.open(email);
+  }
+
 
 }
