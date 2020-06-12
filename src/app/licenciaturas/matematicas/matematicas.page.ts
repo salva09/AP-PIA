@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { MenuController } from '@ionic/angular';
+import { AnimacionService } from '../../servicios/animacion.service';
 
 @Component({
   selector: 'app-matematicas',
@@ -8,22 +9,31 @@ import { MenuController } from '@ionic/angular';
 })
 export class MatematicasPage implements OnInit {
 
-  constructor(private menu: MenuController) { }
+  constructor(
+    private menu: MenuController,
+    private animacion: AnimacionService
+  ) {
+
+  }
+
+  animarFlecha(seccion) {
+    this.animacion.animateArrow(seccion);
+  }
 
   secciones = [
     {
       titulo: 'Objetivo:',
-      icon: 'play-outline',
+      clase: "a",
       texto: 'Formar Licenciados en Matemáticas con un perfil integral y sentido de responsabilidad social, ' +
-      'capaces de validar y analizar teorías matemáticas a través del pensamiento lógico-matemático; ' +
-      'plantear, modelar y resolver problemas reales con aplicaciones en la industria y en las ciencias físicas, ' +
-      'biológicas y sociales; así como propiciar el pensamiento matemático mediante procesos de enseñanza aprendizaje. ' +
-      'Son distinguidos por colaborar en proyectos de investigación de forma ética, en equipos interdisciplinarios y utilizar tecnologías de vanguardia. ' +
-      'Los Licenciados en Matemáticas contribuyen al avance de la ciencia y su aplicación en beneficio de diferentes sectores gubernamentales y la industria privada.'
+        'capaces de validar y analizar teorías matemáticas a través del pensamiento lógico-matemático; ' +
+        'plantear, modelar y resolver problemas reales con aplicaciones en la industria y en las ciencias físicas, ' +
+        'biológicas y sociales; así como propiciar el pensamiento matemático mediante procesos de enseñanza aprendizaje. ' +
+        'Son distinguidos por colaborar en proyectos de investigación de forma ética, en equipos interdisciplinarios y utilizar tecnologías de vanguardia. ' +
+        'Los Licenciados en Matemáticas contribuyen al avance de la ciencia y su aplicación en beneficio de diferentes sectores gubernamentales y la industria privada.'
     },
     {
       titulo: 'Cualidades del Aspirante:',
-      icon: 'play-outline',
+      clase: "b",
       texto: '<b>Cualidades deseables en el aspirante a ingresar a esta carrera</b><br>' +
         '• Vocación para el estudio de las ciencias.<br>' +
         '• Capacidad para la investigación científica.<br>' +
@@ -33,18 +43,18 @@ export class MatematicasPage implements OnInit {
     },
     {
       titulo: 'Cualidades del Egresado:',
-      icon: 'play-outline',
+      clase: "c",
       texto: '<b>Competencias específicas</b><br>' +
-      '• Contribuir al desarrollo de proposiciones y teoremas empleando el razonamiento lógico-matemático y lenguaje formal ' +
-      'que permitan comunicar los hallazgos para el avance de la ciencia y su futura aplicación en fenómenos del mundo real.<br>' +
-      '• Proponer soluciones a problemas reales mediante la modelación matemática y resolución de dichos modelos con la ayuda de ' +
-      'medios tecnológicos para el apoyo en la toma de decisiones en disciplinas de las ciencias físicas, biológicas y sociales.<br>' +
-      '• Conducir procesos de enseñanza-aprendizaje apegados a principios pedagógicos, planeación y elementos didácticos de ' +
-      'las matemáticas que permitan fortalecer en los estudiantes las habilidades de abstracción, análisis y resolución de problemas.'
+        '• Contribuir al desarrollo de proposiciones y teoremas empleando el razonamiento lógico-matemático y lenguaje formal ' +
+        'que permitan comunicar los hallazgos para el avance de la ciencia y su futura aplicación en fenómenos del mundo real.<br>' +
+        '• Proponer soluciones a problemas reales mediante la modelación matemática y resolución de dichos modelos con la ayuda de ' +
+        'medios tecnológicos para el apoyo en la toma de decisiones en disciplinas de las ciencias físicas, biológicas y sociales.<br>' +
+        '• Conducir procesos de enseñanza-aprendizaje apegados a principios pedagógicos, planeación y elementos didácticos de ' +
+        'las matemáticas que permitan fortalecer en los estudiantes las habilidades de abstracción, análisis y resolución de problemas.'
     },
     {
       titulo: 'Campo Laboral',
-      icon: 'play-outline',
+      clase: "d",
       texto: '<b>Industrias en el sector público o privado (instituciones gubernamentales, empresas del ramo metalmecánico, ' +
         'consultorías, logística, financieras, entre otras).</b><br><br>' +
 
@@ -70,7 +80,7 @@ export class MatematicasPage implements OnInit {
     },
     {
       titulo: 'Plan de Estudios',
-      icon: 'play-outline',
+      clase: "e",
       texto: 'Consulta el plan de estudios aquí: <a href="#">Plan de Estudios</a>'
     }
   ];
