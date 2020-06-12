@@ -74,7 +74,13 @@ export class PlanLSTIPage implements OnInit {
           horas: "5",
           requisitos: [
             {
+              materia: "Cálculo diferencial"
+            },
+            {
               materia: "Álgebra"
+            },
+            {
+              materia: "Geometría analítica"
             }
           ]
         },
@@ -168,7 +174,7 @@ export class PlanLSTIPage implements OnInit {
           horas: "5",
           requisitos: [
             {
-              materia: ""
+              materia: "Introducción a la programación"
             }
           ]
         },
@@ -178,7 +184,7 @@ export class PlanLSTIPage implements OnInit {
           horas: "2",
           requisitos: [
             {
-              materia: ""
+              materia: "Introducción a la programación"
             }
           ]
         },
@@ -188,7 +194,10 @@ export class PlanLSTIPage implements OnInit {
           horas: "5",
           requisitos: [
             {
-              materia: ""
+              materia: "Física básica"
+            },
+            {
+              materia: "Cálculo integral"
             }
           ]
         },
@@ -198,7 +207,7 @@ export class PlanLSTIPage implements OnInit {
           horas: "5",
           requisitos: [
             {
-              materia: "Estructura de datos"
+              materia: "matemáticas discretas"
             }
           ]
         }
@@ -213,7 +222,13 @@ export class PlanLSTIPage implements OnInit {
           horas: "3",
           requisitos: [
             {
-              materia: ""
+              materia: "Programación para ciberseguridad"
+            },
+            {
+              materia: "Laboratorio de programación para ciberseguridad"
+            },
+            {
+              materia: "Teoría de autómatas"
             }
           ]
         },
@@ -233,7 +248,7 @@ export class PlanLSTIPage implements OnInit {
           horas: "3",
           requisitos: [
             {
-              materia: ""
+              materia: "Señales de transmisión"
             }
           ]
         },
@@ -243,7 +258,7 @@ export class PlanLSTIPage implements OnInit {
           horas: "2",
           requisitos: [
             {
-              materia: ""
+              materia: "Señales de transmisión"
             }
           ]
         },
@@ -263,7 +278,10 @@ export class PlanLSTIPage implements OnInit {
           horas: "3",
           requisitos: [
             {
-              materia: ""
+              materia: "Programación para ciberseguridad"
+            },
+            {
+              materia: "Laboratorio de programación para ciberseguridad"
             }
           ]
         },
@@ -273,7 +291,10 @@ export class PlanLSTIPage implements OnInit {
           horas: "2",
           requisitos: [
             {
-              materia: ""
+              materia: "Programación para ciberseguridad"
+            },
+            {
+              materia: "Laboratorio de programación para ciberseguridad"
             }
           ]
         },
@@ -283,7 +304,7 @@ export class PlanLSTIPage implements OnInit {
           horas: "5",
           requisitos: [
             {
-              materia: ""
+              materia: "Álgebra lineal"
             }
           ]
         }
@@ -298,7 +319,7 @@ export class PlanLSTIPage implements OnInit {
           horas: "3",
           requisitos: [
             {
-              materia: ""
+              materia: "Programa de seguridad"
             }
           ]
         },
@@ -308,7 +329,10 @@ export class PlanLSTIPage implements OnInit {
           horas: "3",
           requisitos: [
             {
-              materia: ""
+              materia: "Fundamentos de redes"
+            },
+            {
+              materia: "Laboratorio de fundamentos de redes"
             }
           ]
         },
@@ -318,7 +342,10 @@ export class PlanLSTIPage implements OnInit {
           horas: "2",
           requisitos: [
             {
-              materia: ""
+              materia: "Fundamentos de redes"
+            },
+            {
+              materia: "Laboratorio de fundamentos de redes"
             }
           ]
         },
@@ -368,7 +395,7 @@ export class PlanLSTIPage implements OnInit {
           horas: "5",
           requisitos: [
             {
-              materia: ""
+              materia: "Teoría de la información"
             }
           ]
         }
@@ -378,9 +405,75 @@ export class PlanLSTIPage implements OnInit {
       numero: "Sexto Semestre",
       materias: [
         {
-          nombre: "",
-          creditos: "",
-          horas: "",
+          nombre: "Derecho informático",
+          creditos: "3",
+          horas: "3",
+          requisitos: [
+            {
+              materia: "Normatividad y regularaciones de datos"
+            }
+          ]
+        },
+        {
+          nombre: "Diseño de políticas de seguridad de la información",
+          creditos: "3",
+          horas: "3",
+          requisitos: [
+            {
+              materia: ""
+            }
+          ]
+        },
+        {
+          nombre: "Inglés para tecnologías",
+          creditos: "4",
+          horas: "5",
+          requisitos: [
+            {
+              materia: ""
+            }
+          ]
+        },
+        {
+          nombre: "Interconexión de redes locales",
+          creditos: "3",
+          horas: "3",
+          requisitos: [
+            {
+              materia: "Conmutación de redes locales"
+            },
+            {
+              materia: "Laboratorio de conmutación de redes locales"
+            }
+          ]
+        },
+        {
+          nombre: "Laboratorio de interconexión de redes locales",
+          creditos: "2",
+          horas: "2",
+          requisitos: [
+            {
+              materia: "Conmutación de redes locales"
+            },
+            {
+              materia: "Laboratorio de conmutación de redes locales"
+            }
+          ]
+        },
+        {
+          nombre: "Responsabilidad social y desarrollo sustentable",
+          creditos: "2",
+          horas: "2",
+          requisitos: [
+            {
+              materia: ""
+            }
+          ]
+        },
+        {
+          nombre: "Optativa II área curricular de formación profesional fundamental",
+          creditos: "4",
+          horas: "4",
           requisitos: [
             {
               materia: ""
@@ -393,9 +486,85 @@ export class PlanLSTIPage implements OnInit {
       numero: "Séptimo Semestre",
       materias: [
         {
-          nombre: "",
-          creditos: "",
-          horas: "",
+          nombre: "Control de accesos ",
+          creditos: "3",
+          horas: "3",
+          requisitos: [
+            {
+              materia: "Interconexión de redes locales"
+            },
+            {
+              materia: "Laboratorio de interconexión de redes locales"
+            }
+          ]
+        },
+        {
+          nombre: "Laboratorio de control de accesos",
+          creditos: "2",
+          horas: "2",
+          requisitos: [
+            {
+              materia: "Interconexión de redes locales"
+            },
+            {
+              materia: "Laboratorio de interconexión de redes locales"
+            }
+          ]
+        },
+        {
+          nombre: "Diseño de arquitecturas de seguridad informática",
+          creditos: "3",
+          horas: "3",
+          requisitos: [
+            {
+              materia: "Diseño de políticas de seguridad informática"
+            }
+          ]
+        },
+        {
+          nombre: "Gobierno, riesgo y cumplimiento",
+          creditos: "3",
+          horas: "3",
+          requisitos: [
+            {
+              materia: ""
+            }
+          ]
+        },
+        {
+          nombre: "Liderazgo, emprendimiento e innovación",
+          creditos: "2",
+          horas: "2",
+          requisitos: [
+            {
+              materia: ""
+            }
+          ]
+        },
+        {
+          nombre: "Operación de la seguridad ",
+          creditos: "3",
+          horas: "3",
+          requisitos: [
+            {
+              materia: ""
+            }
+          ]
+        },
+        {
+          nombre: "Optativa III área curricular de formación profesional fundamental",
+          creditos: "4",
+          horas: "4",
+          requisitos: [
+            {
+              materia: ""
+            }
+          ]
+        },
+        {
+          nombre: "Optativa IV área curricular de formación profesional fundamental",
+          creditos: "4",
+          horas: "4",
           requisitos: [
             {
               materia: ""
@@ -408,9 +577,51 @@ export class PlanLSTIPage implements OnInit {
       numero: "Octavo Semestre",
       materias: [
         {
-          nombre: "",
-          creditos: "",
-          horas: "",
+          nombre: "Pruebas de vulnerabilidades",
+          creditos: "3",
+          horas: "3",
+          requisitos: [
+            {
+              materia: "Control de accesos"
+            },
+            {
+              materia: "Laboratorio de control de accesos"
+            },
+            {
+              materia: "Operación de la seguridad"
+            }
+          ]
+        },
+        {
+          nombre: "Laboratorio de pruebas de vulnerabilidades",
+          creditos: "2",
+          horas: "2",
+          requisitos: [
+            {
+              materia: "Control de accesos"
+            },
+            {
+              materia: "Laboratorio de control de accesos"
+            },
+            {
+              materia: "Operación de la seguridad"
+            }
+          ]
+        },
+        {
+          nombre: "Servicio social",
+          creditos: "16",
+          horas: "2",
+          requisitos: [
+            {
+              materia: ""
+            }
+          ]
+        },
+        {
+          nombre: "Optativa V área curricular de formación profesional fundamental",
+          creditos: "4",
+          horas: "4",
           requisitos: [
             {
               materia: ""
@@ -423,15 +634,136 @@ export class PlanLSTIPage implements OnInit {
       numero: "Noveno Semestre",
       materias: [
         {
-          nombre: "",
-          creditos: "",
-          horas: "",
+          nombre: "Computo forense",
+          creditos: "4",
+          horas: "5",
+          requisitos: [
+            {
+              materia: "Pruebas de vulnerabilidades"
+            },
+            {
+              materia: "Laboratorio de pruebas de vulnerabilidades"
+            },
+            {
+              materia: "Gobierno, riesgo y cumplimiento"
+            }
+          ]
+        },
+        {
+          nombre: "Continuidad de negocio y recuperación de desastres",
+          creditos: "3",
+          horas: "3",
+          requisitos: [
+            {
+              materia: "Gobierno, riesgo y cumplimiento"
+            }
+          ]
+        },
+        {
+          nombre: "Gestión de incidentes de seguridad informática",
+          creditos: "3",
+          horas: "3",
+          requisitos: [
+            {
+              materia: "Gobierno, riesgo y cumplimiento"
+            }
+          ]
+        },
+        {
+          nombre: "Modelo de negocios",
+          creditos: "3",
+          horas: "3",
+          requisitos: [
+            {
+              materia: ""
+            }
+          ]
+        },
+        {
+          nombre: "Optativa Área curricular de formación profesional integradora",
+          creditos: "6",
+          horas: "2",
+          requisitos: [
+            {
+              materia: ""
+            }
+          ]
+        },
+        {
+          nombre: "Optativa VI área curricular de formación profesional fundamental",
+          creditos: "4",
+          horas: "4",
           requisitos: [
             {
               materia: ""
             }
           ]
         }
+      ]
+    },
+    {
+      numero: "Décimo Semestre",
+      materias: [
+        {
+          nombre: "Administración de amenazas operativas",
+          creditos: "3",
+          horas: "3",
+          requisitos: [
+            {
+              materia: "Inglés para tecnologías"
+            }
+          ]
+        },
+        {
+          nombre: "Administración de dependencias externas",
+          creditos: "3",
+          horas: "3",
+          requisitos: [
+            {
+              materia: "Inglés para tecnologías"
+            }
+          ]
+        },
+        {
+          nombre: "Programa de amenazas internas",
+          creditos: "3",
+          horas: "3",
+          requisitos: [
+            {
+              materia: "Inglés para tecnologías"
+            }
+          ]
+        },
+        {
+          nombre: "Seminario de egreso",
+          creditos: "1",
+          horas: "1",
+          requisitos: [
+            {
+              materia: ""
+            }
+          ]
+        },
+        {
+          nombre: "Seminario para el desempeño profesional",
+          creditos: "1",
+          horas: "1",
+          requisitos: [
+            {
+              materia: ""
+            }
+          ]
+        },
+        {
+          nombre: "Transformación digital",
+          creditos: "3",
+          horas: "3",
+          requisitos: [
+            {
+              materia: "Inglés para tecnologías"
+            }
+          ]
+        },
       ]
     }
   ]
