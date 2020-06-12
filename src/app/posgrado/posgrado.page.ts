@@ -29,7 +29,7 @@ export class PosgradoPage implements OnInit {
         "frontera, y competitiva a nivel internacional, y con capacidad y conocimientos para desarrollar tecnología.",
       imagen: "assets/Posgrado/Ing-Fis-Ind.jpeg",
       pagina: "/posgrado/ing-fis-ind",
-      audio: "assets/Posgrado/mifi.mp3"
+      audio: "assets/Posgrado/Ing-Fis-Ind.mp4"
     },
     {
       nombre: "Ing. en Seguridad de la Información",

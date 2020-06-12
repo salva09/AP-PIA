@@ -68,7 +68,7 @@ export class LicenciaturasPage implements OnInit {
         "científico, tecnológico, económico y social de la región y del país en el contexto internacional.",
       imagen: "assets/Licenciaturas/lsti.jpg",
       pagina: "/licenciaturas/seguridad-informatica",
-      audio: "assets/Licenciaturas/lsti.mp3"
+      audio: "assets/Licenciaturas/lsti.mp4"
     }
   ]
 
