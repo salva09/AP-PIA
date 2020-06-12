@@ -54,10 +54,10 @@ export class PosgradoPage implements OnInit {
     {
       nombre: "Maestría en Astrofísica Planetaria y Tecnologías Afines",
       siglas: "MAPTA",
-      descripcion: "La reciente creación de la Agencia Espacial Mexicana en 2010, define el inicio nuevos esfuerzos" + 
-      "para el desarrollo de las ciencias espaciales en México. Este entorno impone la necesidad de formar recursos" + 
-      "humanos especializados con capacidad para colaborar en proyectos de investigación en las áreas de la Ciencias" + 
-      "Planetarias",
+      descripcion: "La reciente creación de la Agencia Espacial Mexicana en 2010, define el inicio de nuevos esfuerzos" + 
+      " para el desarrollo de las ciencias espaciales en México. Este entorno impone la necesidad de formar recursos" + 
+      " humanos especializados con capacidad para colaborar en proyectos de investigación en las áreas de la Ciencias" + 
+      " Planetarias",
       imagen: "assets/Posgrado/Astronomia.jpeg",
       pagina: "/posgrado/astrofisica",
       audio: "assets/Posgrado/mapta.mp3"
@@ -70,7 +70,7 @@ export class PosgradoPage implements OnInit {
       "ante la comunidad científica nacional e internacional.",
       imagen: "assets/Posgrado/Doc-Mat.jpeg",
       pagina: "/posgrado/doc-mate",
-      audio: "assets/Audios/Doc.Mate.mp3"
+      audio: "assets/Posgrado/dcom.mp3"
     },
     {
       nombre: "Doctorado en Ing. Física Industrial",
