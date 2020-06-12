@@ -1,7 +1,7 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-buttons slot="start">
-      <ion-menu-button autoHide="false"></ion-menu-button>
+      <ion-menu-button (click)="togglePlayer(true)" autoHide="false"></ion-menu-button>
     </ion-buttons>
 
     <ion-title>
@@ -24,7 +24,7 @@
       <p><b>Objetivo: </b><br></p>
       {{ licenciatura.descripcion }}
 
-      <ion-button [routerLink]="licenciatura.pagina">
+      <ion-button (click)="togglePlayer(true)" [routerLink]="licenciatura.pagina">
         <ion-icon name="bulb-outline" slot="start"></ion-icon>
         Conoce Más
       </ion-button>

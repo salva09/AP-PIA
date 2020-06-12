@@ -100,12 +100,14 @@ export class PosgradoPage implements OnInit {
   }
 
   togglePlayer(pause) {
-    this.isPlaying = !pause;
-    if (pause) {
-      this.player.pause();
-    }
-    else {
-      this.player.play();
+    if(this.player) {
+      this.isPlaying = !pause;
+      if (pause) {
+        this.player.pause();
+      }
+      else {
+        this.player.play();
+      }
     }
   }
 
