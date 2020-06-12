@@ -10,7 +10,7 @@ import { EmailComposer } from '@ionic-native/email-composer/ngx';
 export class ContactoPage implements OnInit {
 
   constructor(private camera: Camera, public composer:EmailComposer) {}
-
+  
   foto: any;
   nombre='';
   edad='';
@@ -40,8 +40,10 @@ export class ContactoPage implements OnInit {
       nombre: this.nombre,
       comentario: this.comentario,
       body: this.nombre+': '+this.comentario+
-      'Edad: '+this.edad,
-        
+      '<br>Edad: '+this.edad+'<br><br>',
+      attachments : [
+        this.foto
+      ],  
         
       
       app: "Gmail",
