@@ -11,7 +11,7 @@
 </ion-header>
 
 <ion-content>
-    <ion-card *ngFor = "let posgrado of posgrados" style="width:80%; display:block; margin:auto; margin-bottom:20px;">
+    <ion-card *ngFor = "let posgrado of posgrados">
       <ion-card-header style="text-align:center;">
         <ion-card-title>
           {{ posgrado.nombre }}
@@ -19,17 +19,17 @@
       </ion-card-header>
       
       <ion-card-content style="text-align:justify;">
-        <ion-img [src] = "posgrado.imagen" style="width:90%; display:block; margin:auto; margin-bottom:10px; "></ion-img>
+        <ion-img [src] = "posgrado.imagen"></ion-img>
   
         <p><b>Objetivo: </b><br></p>
         {{ posgrado.descripcion }}
         
-        <ion-button [routerLink]="posgrado.pagina" style="display:block; margin:auto; margin-top:10px;">
+        <ion-button [routerLink]="posgrado.pagina">
           <ion-icon name="bulb-outline" slot="start"></ion-icon>
           Conoce Más
         </ion-button>
   
-        <ion-button *ngIf="activeAudio != posgrado.audio" (click)="start(posgrado.audio, $event)" style="display:block; margin:auto; margin-top:10px;">
+        <ion-button *ngIf="activeAudio != posgrado.audio" (click)="start(posgrado.audio, $event)">
           <ion-icon name="headset-outline" slot="start"></ion-icon>
           Reproducir Audio
         </ion-button>

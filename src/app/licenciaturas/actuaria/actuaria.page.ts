@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, SecurityContext } from '@angular/core';
 import { MenuController } from "@ionic/angular";
+import { AnimacionService } from '../../servicios/animacion.service';
 
 @Component({
   selector: 'app-actuaria',
@@ -8,22 +9,31 @@ import { MenuController } from "@ionic/angular";
 })
 export class ActuariaPage implements OnInit {
 
-  constructor(private menu: MenuController) { }
-  
+  constructor(
+    private menu: MenuController,
+    private animacion: AnimacionService
+  ) {
+
+  }
+
+  animarFlecha(seccion) {
+    this.animacion.animateArrow(seccion);
+  }
+
   secciones = [
     {
-      titulo:"Objetivo:",
-      icon: "play-outline",
+      titulo:"Objetivo",
+      clase: 'a',
       texto:"Formar Licenciados en Actuaría apegados a los lineamientos educativos internacionales del gremio "+
        "actuarial en base a los Modelos Educativo y Académico de la UANL."
     },
     {
-      titulo:"Cualidades del Aspirante:",
-      icon: "play-outline",
+      titulo:"Cualidades del Aspirante",
+      clase: 'b',
       texto:"<b>PERFIL DE INGRESO:</b><br><br>" +
 
       "Los atributos deseables del estudiante son:<br><br>" +
-      
+
       "• Posee conocimientos en álgebra, cálculo diferencial e integral y geometría analítica a nivel bachillerato.<br>"+
       "• Demuestra capacidad para la concentración y el trabajo durante largos periodos de tiempo.<br>"+
       "• Es tenaz y perseverante al analizar y resolver problemas.<br>"+
@@ -36,18 +46,19 @@ export class ActuariaPage implements OnInit {
     },
     {
       titulo:"Perfil del Egresado:",
-      icon: "play-outline",
-      texto:"Formar Licenciados en Actuaría con un perfil integral, altamente competentes en el mundo laboral, capaces de entender holísticamente la realidad,"+
-      " con plena conciencia de la situación regional, nacional y mundial, comprometidos con el desarrollo sustentable, económico, tecnológico y "+
-      "social de la humanidad capaces de estudiar, plantear y formular modelos de contenido matemático así como estadístico y probabilístico,"+
-      " información para la planeación, la previsión y la toma de decisiones acerca de fenómenos que involucran riesgos, además de ofrecer con el fin de proveer"+
-      " soluciones relevantes y asesoría experta a problemas financieros, empresariales y sociales que involucren eventos futuros inciertos, tanto en el ámbito laboral público como privado."
+      clase: 'c',
+      texto:"Formar Licenciados en Actuaría con un perfil integral, altamente competentes en el mundo laboral, capaces de entender "+
+      "holísticamente la realidad, con plena conciencia de la situación regional, nacional y mundial, comprometidos con el desarrollo "+
+      "sustentable, económico, tecnológico y social de la humanidad capaces de estudiar, plantear y formular modelos de contenido "+
+      "matemático así como estadístico y probabilístico, información para la planeación, la previsión y la toma de decisiones acerca de "+
+      "fenómenos que involucran riesgos, además de ofrecer con el fin de proveer soluciones relevantes y asesoría experta a problemas "+
+      "financieros, empresariales y sociales que involucren eventos futuros inciertos, tanto en el ámbito laboral público como privado."
     },
     {
       titulo: "Campo Laboral",
-      icon: "play-outline",
+      clase: 'd',
       texto:"<b>Fuentes de empleo de los egresados de esta carrera</b><br><br>"+
-      "• Compañías aseguradoras (diseño de planes de seguros de vida, accidentes, enfermedades, salud, daños y reaseguro )<br>"+
+      "• Compañías aseguradoras (diseño de planes de seguros de vida, accidentes, enfermedades, salud, daños y reaseguro)<br>"+
       "• Empresas del sector financiero (Instituciones bancarias, casas de bolsa, inversiones, administración del riesgo).<br>"+
       "• Empresas del sector Industrial (Estadística Industrial)<br>"+
       "• Despachos de consultoría actuarial.<br>"+
@@ -56,7 +67,7 @@ export class ActuariaPage implements OnInit {
     },
     {
       titulo: "Plan de Estudios",
-      icon: "play-outline",
+      clase: 'e',
       texto: "Consulta el plan de estudios aquí: <a href=\"/licenciaturas/actuaria/plan-la\">Plan de Estudios</a>"
     }
   ]
