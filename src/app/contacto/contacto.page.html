@@ -1,54 +1,51 @@
 <ion-header [translucent]="true">
-    <ion-toolbar>
-        <ion-buttons slot="start">
-            <ion-menu-button autoHide="false"></ion-menu-button>
-        </ion-buttons>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button autoHide="false"></ion-menu-button>
+    </ion-buttons>
 
-        <ion-title>
-            Contacto
-        </ion-title>
-    </ion-toolbar>
+    <ion-title>
+      Contacto
+    </ion-title>
+  </ion-toolbar>
 </ion-header>
 <!-- No se si lo del formulario iba en contacto xD - SILVIA -->
+
+
 <ion-content>
-    <ion-card>
-        <ion-card-content>
-            <form>
-                <ion-list>
-                    <br>
-                    <ion-item>
-                        <ion-label position="floating">Nombres</ion-label>
-                        <br>
-                        <ion-input required type="text" name="nombre" clearInput="true"></ion-input>
-                    </ion-item>
-                    <br>
-                    <ion-item>
-                        <ion-label position="floating">Edad</ion-label>
-                        <br>
-                        <ion-input required type="numeric" name="numeric" clearInput="true"></ion-input>
-                    </ion-item>
-                    <br>
-                    <ion-item>
-                        <ion-label position="floating">E-Mail<ion-text color="danger">*</ion-text></ion-label>
-                        <br>
-                        <ion-input required type="email" name="email" clearInput="true"></ion-input>
-                    </ion-item>
-                    <br>
-                    <ion-item>
-                        <ion-label position="floating">Comentarios</ion-label>
-                        <br>
-                        <ion-textarea rows="6" cols="20" placeholder="Escriba sus comentarios..." ></ion-textarea>
-                    </ion-item>
-                    <br>
-                </ion-list>
-                <ion-card>
-                    <ion-card-content>
-                        <ion-button (click)="hacerFoto()" expand="block">Tomar fotografía</ion-button>
-                        <img [src]="foto" *ngIf="foto" />
-                    </ion-card-content>
-                </ion-card>
-                <ion-button expand="block" type="submit" class="ion-no-margin">Enviar datos</ion-button>
-            </form>
-        </ion-card-content>
-    </ion-card>
+
+  <ion-card>
+    <ion-card-content>
+
+      <form [formGroup]="forma">
+        <ion-list>
+          <ion-item>
+            <ion-label position="floating">Nombre</ion-label>
+            <ion-input formControlName="nombre" type="text"></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label position="floating">Edad</ion-label>
+            <ion-input formControlName="edad" type="numeric"></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label position="floating">E-Mail</ion-label>
+            <ion-input formControlName="email" type="text"></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label position="floating">Comentarios</ion-label>
+            <ion-textarea formControlName="comentario" rows="6" cols="20" placeholder="Escriba sus comentarios...">
+            </ion-textarea>
+          </ion-item>
+        </ion-list>
+      </form>
+
+      <ion-button (click)="hacerFoto()" expand="block">Tomar fotografía</ion-button>
+      <img [src]="foto" *ngIf="foto" />
+
+      <ion-button (click)="submit()" type="submit" [disabled]="!forma.valid" expand="block">
+        Enviar datos
+      </ion-button>
+
+    </ion-card-content>
+  </ion-card>
 </ion-content>
