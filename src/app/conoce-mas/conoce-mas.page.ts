@@ -1,6 +1,6 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { IonSegment } from '@ionic/angular';
-import {ModalController} from "@ionic/angular";
+import {ModalController} from '@ionic/angular';
 
 @Component({
   selector: 'app-conoce-mas',
@@ -9,21 +9,19 @@ import {ModalController} from "@ionic/angular";
 })
 export class ConoceMasPage implements OnInit {
 
-  opciones={
-    zoom: {
-      maxRatio:2
-    }
-  }
-
-  @ViewChild(IonSegment, {static:true}) opcion: IonSegment;
+  conoceMas = 'servicios';
 
   constructor(private modalC: ModalController) { }
 
-  ngOnInit() {
-    this.opcion.value='servicios';
-  }
+  opciones = {
+    zoom: {
+      maxRatio: 2
+    }
+  };
 
-  deportes=[
+  @ViewChild(IonSegment, {static: true}) opcion: IonSegment;
+
+  deportes = [
     {
       nombre: 'Ajedrez Femenil y Varonil',
       imagen: 'https://i.pinimg.com/originals/93/80/77/93807741e52b8641e63cab9d5a29e469.jpg'
@@ -72,46 +70,48 @@ export class ConoceMasPage implements OnInit {
       nombre: 'Futbol Americano',
       imagen: 'https://i.pinimg.com/originals/74/5e/f4/745ef4935ef3a8a326ddfa2759840ddf.png'
     }
-  ]
+  ];
 
-  actividadesCulturales=[
+  actividadesCulturales = [
 
     {
-      nombre:'Tuna',
-      imagen:'https://www.ulima.edu.pe/sites/default/files/styles/600x300/public/event/img/tunas-banner-600x300.png?itok=o0jGSaHC'
+      nombre: 'Tuna',
+      imagen: 'https://www.ulima.edu.pe/sites/default/files/styles/600x300/public/event/img/tunas-banner-600x300.png?itok=o0jGSaHC'
     },
     {
-      nombre:'Rondalla',
-      imagen:'https://eventosciudadjuarez.files.wordpress.com/2012/11/musica.jpg'
+      nombre: 'Rondalla',
+      imagen: 'https://eventosciudadjuarez.files.wordpress.com/2012/11/musica.jpg'
     },
     {
-      nombre:'Guitarras Clasicas',
-      imagen:'https://lh3.googleusercontent.com/proxy/zNyZVv255ePSCS5qENcZoDG2kYSXodk_lw0C59LzF4B3E2UP2XFfXQWy_V1fF_eAHAnjJPgecaMYA3jK9n-zPs0aXC5LL4k3WOi_WzAqQbCt69vadDdJuN4RDEE5n1dXFg'
+      nombre: 'Guitarras Clasicas',
+      imagen: 'https://lh3.googleusercontent.com/proxy/zNyZVv255ePSCS5qENcZoDG2kYSXodk_lw0C59LzF4B3E2UP2XFfXQWy_V1fF_eAHAnjJPgecaMYA3jK9n-zPs0aXC5LL4k3WOi_WzAqQbCt69vadDdJuN4RDEE5n1dXFg'
     },
     {
-      nombre:'Danza Folklórica',
-      imagen:'https://cartelera.morelos.gob.mx/wp-content/uploads/2019/06/banner_danzafolklorica-01.jpg'
+      nombre: 'Danza Folklórica',
+      imagen: 'https://cartelera.morelos.gob.mx/wp-content/uploads/2019/06/banner_danzafolklorica-01.jpg'
     },
     {
-      nombre:'Teatro',
-      imagen:'https://www.netclipart.com/pp/m/233-2338340_stage-dibujo-de-un-teatro-a-color.png'
+      nombre: 'Teatro',
+      imagen: 'https://www.netclipart.com/pp/m/233-2338340_stage-dibujo-de-un-teatro-a-color.png'
     },
     {
-      nombre:'Ritmos Latinos',
-      imagen:'https://illustoon.com/photo/923.png'
+      nombre: 'Ritmos Latinos',
+      imagen: 'https://illustoon.com/photo/923.png'
     },
     {
-      nombre:'Salsa',
-      imagen:'https://image.shutterstock.com/image-vector/vector-cartoon-music-note-icon-260nw-1165584241.jpg'
+      nombre: 'Salsa',
+      imagen: 'https://image.shutterstock.com/image-vector/vector-cartoon-music-note-icon-260nw-1165584241.jpg'
     },
     {
-      nombre:'Grupo Musical (Fisicos)',
-      imagen:'https://i.pinimg.com/originals/37/98/03/37980363eab04d9cd22ee9bb1da08da7.jpg'
+      nombre: 'Grupo Musical (Fisicos)',
+      imagen: 'https://i.pinimg.com/originals/37/98/03/37980363eab04d9cd22ee9bb1da08da7.jpg'
     },
     {
-      nombre:'Hip Hop',
-      imagen:'https://cdn5.dibujos.net/dibujos/pintados/201248/notas-en-la-escala-musical-musica-pintado-por-popet20-9784953.jpg'
+      nombre: 'Hip Hop',
+      imagen: 'https://cdn5.dibujos.net/dibujos/pintados/201248/notas-en-la-escala-musical-musica-pintado-por-popet20-9784953.jpg'
     }
-  ]
+  ];
+
+  ngOnInit() {}
 
 }
