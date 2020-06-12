@@ -69,24 +69,136 @@ export class PlanLMPage implements OnInit {
       numero: "Segundo Semestre",
       materias: [
         {
-          nombre: "",
-          creditos: "",
-          horas: "",
+          nombre: "Tópicos de álgebra",
+          creditos: "4",
+          horas: "5",
           requisitos: [
             {
-              materia: ""
+              materia: "Álgebra"
             }
           ]
-        }
+        },
+        {
+          nombre: "Cálculo integral",
+          creditos: "4",
+          horas: "5",
+          requisitos: [
+            {
+              materia: "Cálculo diferencial"
+            },
+            {
+              materia: "Álgebra"
+            },
+            {
+              materia: "Geometría analítica"
+            }
+          ]
+        },
+        {
+          nombre: "Programación estructurada",
+          creditos: "4",
+          horas: "5",
+          requisitos: [
+            {
+              materia: "Metodología de la programación"
+            }
+          ]
+        },
+        {
+          nombre: "Matemáticas discretas",
+          creditos: "4",
+          horas: "5",
+          requisitos: [
+            {
+              materia: "Metodología de la programación"
+            },
+            {
+              materia: "Álgebra"
+            },
+            {
+              materia: "Cálculo diferencial"
+            }
+          ]
+        },
+        {
+          nombre: "Mecánica traslacional y rotacional",
+          creditos: "6",
+          horas: "7",
+          requisitos: [
+            {
+              materia: "Física básica"
+            }
+          ]
+        },
+        {
+          nombre: "Laboratorio de Programación Estructurada",
+          creditos: "2",
+          horas: "1",
+          requisitos: [
+            {
+              materia: "Metodología de la programación"
+            }
+          ]
+        },
       ]
     },
     {
       numero: "Tercer Semestre",
       materias: [
         {
-          nombre: "",
-          creditos: "",
-          horas: "",
+          nombre: "Cálculo de varias variables",
+          creditos: "4",
+          horas: "5",
+          requisitos: [
+            {
+              materia: "Cálculo integral"
+            }
+          ]
+        },
+        {
+          nombre: "Álgebra lineal",
+          creditos: "4",
+          horas: "5",
+          requisitos: [
+            {
+              materia: "Tópicos de álgebra"
+            }
+          ]
+        },
+        {
+          nombre: "Matemáticas computacionales",
+          creditos: "4",
+          horas: "5",
+          requisitos: [
+            {
+              materia: ""
+            }
+          ]
+        },
+        {
+          nombre: "Cultura de paz",
+          creditos: "2",
+          horas: "1",
+          requisitos: [
+            {
+              materia: ""
+            }
+          ]
+        },
+        {
+          nombre: "Geometría moderna",
+          creditos: "4",
+          horas: "5",
+          requisitos: [
+            {
+              materia: ""
+            }
+          ]
+        },
+        {
+          nombre: "Optativa I área curricular de formación profesional fundamental",
+          creditos: "4",
+          horas: "5",
           requisitos: [
             {
               materia: ""
@@ -99,9 +211,65 @@ export class PlanLMPage implements OnInit {
       numero: "Cuarto Semestre",
       materias: [
         {
-          nombre: "",
-          creditos: "",
-          horas: "",
+          nombre: "Ecuaciones diferenciales",
+          creditos: "4",
+          horas: "5",
+          requisitos: [
+            {
+              materia: "Cálculo de varias variables"
+            },
+            {
+              materia: "Álgebra lineal"
+            }
+          ]
+        },
+        {
+          nombre: "Variable compleja",
+          creditos: "4",
+          horas: "5",
+          requisitos: [
+            {
+              materia: "Cálculo de varias variables"
+            }
+          ]
+        },
+        {
+          nombre: "Cálculo vectorial",
+          creditos: "4",
+          horas: "5",
+          requisitos: [
+            {
+              materia: "Cálculo de varias variables"
+            }
+          ]
+        },
+        {
+          nombre: "Responsabilidad social y desarrollo sustentable",
+          creditos: "2",
+          horas: "1",
+          requisitos: [
+            {
+              materia: ""
+            }
+          ]
+        },
+        {
+          nombre: "Probabilidad",
+          creditos: "4",
+          horas: "5",
+          requisitos: [
+            {
+              materia: "Tópicos de álgebra"
+            },
+            {
+              materia: "Cálculo de varias variables"
+            }
+          ]
+        },
+        {
+          nombre: "Liderazgo, emprendimiento e innovación",
+          creditos: "2",
+          horas: "1",
           requisitos: [
             {
               materia: ""
@@ -114,12 +282,52 @@ export class PlanLMPage implements OnInit {
       numero: "Quinto Semestre",
       materias: [
         {
-          nombre: "",
-          creditos: "",
-          horas: "",
+          nombre: "Estadística",
+          creditos: "4",
+          horas: "5",
           requisitos: [
             {
-              materia: ""
+              materia: "Probabilidad"
+            }
+          ]
+        },
+        {
+          nombre: "Tópicos de álgebra lineal",
+          creditos: "4",
+          horas: "5",
+          requisitos: [
+            {
+              materia: "Álgebra lineal"
+            }
+          ]
+        },
+        {
+          nombre: "Tópicos de ecuaciones diferenciales",
+          creditos: "4",
+          horas: "5",
+          requisitos: [
+            {
+              materia: "Ecuaciones diferenciales"
+            }
+          ]
+        },
+        {
+          nombre: "Historia de las matemáticas",
+          creditos: "4",
+          horas: "5",
+          requisitos: [
+            {
+              materia: "Ecuaciones diferenciales"
+            }
+          ]
+        },
+        {
+          nombre: "Tópicos de variable compleja",
+          creditos: "4",
+          horas: "5",
+          requisitos: [
+            {
+              materia: "Variable compleja"
             }
           ]
         }
@@ -129,9 +337,65 @@ export class PlanLMPage implements OnInit {
       numero: "Sexto Semestre",
       materias: [
         {
-          nombre: "",
-          creditos: "",
-          horas: "",
+          nombre: "Análisis matemático",
+          creditos: "4",
+          horas: "5",
+          requisitos: [
+            {
+              materia: "Cálculo de varias variables"
+            },
+            {
+              materia: "Variable compleja"
+            }
+          ]
+        },
+        {
+          nombre: "Minería de datos",
+          creditos: "4",
+          horas: "5",
+          requisitos: [
+            {
+              materia: "Estadística"
+            }
+          ]
+        },
+        {
+          nombre: "Programación lineal",
+          creditos: "4",
+          horas: "5",
+          requisitos: [
+            {
+              materia: "Álgebra lineal"
+            },
+            {
+              materia: "Cálculo de varias variables"
+            }
+          ]
+        },
+        {
+          nombre: "Teoría de grupos",
+          creditos: "4",
+          horas: "5",
+          requisitos: [
+            {
+              materia: "Tópicos de álgebra lineal"
+            }
+          ]
+        },
+        {
+          nombre: "Matemática educativa",
+          creditos: "4",
+          horas: "5",
+          requisitos: [
+            {
+              materia: "Historia de las matemáticas"
+            }
+          ]
+        },
+        {
+          nombre: "Ética y cultura de la legalidad",
+          creditos: "2",
+          horas: "1",
           requisitos: [
             {
               materia: ""
@@ -144,9 +408,62 @@ export class PlanLMPage implements OnInit {
       numero: "Septimo Semestre",
       materias: [
         {
-          nombre: "",
-          creditos: "",
-          horas: "",
+          nombre: "Tópicos de análisis matemático",
+          creditos: "4",
+          horas: "5",
+          requisitos: [
+            {
+              materia: "Análisis matemático"
+            }
+          ]
+        },
+        {
+          nombre: "Teoría de anillos y campos",
+          creditos: "4",
+          horas: "5",
+          requisitos: [
+            {
+              materia: "Teoría de grupos"
+            }
+          ]
+        },
+        {
+          nombre: "Topología",
+          creditos: "4",
+          horas: "5",
+          requisitos: [
+            {
+              materia: "Análisis matemático"
+            }
+          ]
+        },
+        {
+          nombre: "Enseñanza de las ciencias físico matemáticas",
+          creditos: "4",
+          horas: "5",
+          requisitos: [
+            {
+              materia: "Matemática educativa"
+            }
+          ]
+        },
+        {
+          nombre: "Investigación de operaciones",
+          creditos: "4",
+          horas: "5",
+          requisitos: [
+            {
+              materia: "Programación lineal"
+            },
+            {
+              materia: "Probabilidad"
+            }
+          ]
+        },
+        {
+          nombre: "Optativa II área curricular de formación profesional fundamental",
+          creditos: "4",
+          horas: "5",
           requisitos: [
             {
               materia: ""
@@ -159,9 +476,29 @@ export class PlanLMPage implements OnInit {
       numero: "Octavo Semestre",
       materias: [
         {
-          nombre: "",
-          creditos: "",
-          horas: "",
+          nombre: "Teoría de la medida",
+          creditos: "4",
+          horas: "5",
+          requisitos: [
+            {
+              materia: "Tópicos de análisis matemático"
+            }
+          ]
+        },
+        {
+          nombre: "Servicio social",
+          creditos: "16",
+          horas: "2",
+          requisitos: [
+            {
+              materia: ""
+            }
+          ]
+        },
+        {
+          nombre: "Optativa III área curricular de formación profesional fundamental",
+          creditos: "4",
+          horas: "5",
           requisitos: [
             {
               materia: ""
@@ -174,9 +511,82 @@ export class PlanLMPage implements OnInit {
       numero: "Noveno Semestre",
       materias: [
         {
-          nombre: "",
-          creditos: "",
-          horas: "",
+          nombre: "Geometría diferencial",
+          creditos: "4",
+          horas: "5",
+          requisitos: [
+            {
+              materia: "Topología"
+            }
+          ]
+        },
+        {
+          nombre: "Métodos de optimización",
+          creditos: "4",
+          horas: "5",
+          requisitos: [
+            {
+              materia: "Investigación de operaciones"
+            },
+            {
+              materia: "Tópicos de análisis matemático"
+            }
+          ]
+        },
+        {
+          nombre: "Optativa IV área curricular de formación profesional fundamental",
+          creditos: "4",
+          horas: "5",
+          requisitos: [
+            {
+              materia: ""
+            }
+          ]
+        },
+        {
+          nombre: "Optativa V área curricular de formación profesional fundamental",
+          creditos: "4",
+          horas: "5",
+          requisitos: [
+            {
+              materia: ""
+            }
+          ]
+        },
+        {
+          nombre: "Optativa VI área curricular de formación profesional fundamental",
+          creditos: "4",
+          horas: "5",
+          requisitos: [
+            {
+              materia: ""
+            }
+          ]
+        },
+        {
+          nombre: "Taller para examen de egreso",
+          creditos: "1",
+          horas: "1",
+          requisitos: [
+            {
+              materia: ""
+            }
+          ]
+        },
+        {
+          nombre: "Seminario de investigación	",
+          creditos: "2",
+          horas: "1",
+          requisitos: [
+            {
+              materia: ""
+            }
+          ]
+        },
+        {
+          nombre: "Seminario para el desempeño profesional",
+          creditos: "1",
+          horas: "1",
           requisitos: [
             {
               materia: ""

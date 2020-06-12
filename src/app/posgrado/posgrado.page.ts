@@ -70,7 +70,7 @@ export class PosgradoPage implements OnInit {
       "ante la comunidad científica nacional e internacional.",
       imagen: "assets/Posgrado/Doc-Mat.jpeg",
       pagina: "/posgrado/doc-mate",
-      audio: "assets/Posgrado/dcom.mp3"
+      audio: "assets/Audios/Doc.Mate.mp3"
     },
     {
       nombre: "Doctorado en Ing. Física Industrial",

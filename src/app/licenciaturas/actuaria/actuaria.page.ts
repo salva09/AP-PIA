@@ -57,7 +57,7 @@ export class ActuariaPage implements OnInit {
     {
       titulo: "Plan de Estudios",
       icon: "play-outline",
-      texto: "Consulta el plan de estudios aquí: <a href=\"#\">Plan de Estudios</a>"
+      texto: "Consulta el plan de estudios aquí: <a href=\"/licenciaturas/actuaria/plan-la\">Plan de Estudios</a>"
     }
   ]
   ngOnInit() {

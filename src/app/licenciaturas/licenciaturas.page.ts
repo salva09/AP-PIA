@@ -20,7 +20,7 @@ export class LicenciaturasPage implements OnInit {
         "e investigación básica y aplicada.",
       imagen: "assets/Licenciaturas/lm.jpg",
       pagina: "/licenciaturas/matematicas",
-      audio: "assets/Licenciaturas/lm.mp3"
+      audio: "assets/Audios/Lic.Mate.mp3"
     },
     {
       nombre: "Licenciatura en Física",

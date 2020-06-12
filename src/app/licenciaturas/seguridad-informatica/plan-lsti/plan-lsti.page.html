@@ -7,12 +7,58 @@
       <ion-title>
           Licenciatura en Seguridad en Tecnologías de la Información
       </ion-title>
-      <ion-subtitle>
-        Plan de Estudios
-      </ion-subtitle>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
+  <ion-card *ngFor = "let semestre of semestres" style="width:100%; margin:auto; margin-bottom:20px;">
 
+    <ion-card-header>
+      <ion-card-title>
+          <ion-label>
+              {{semestre.numero}}
+          </ion-label>
+      </ion-card-title>
+    </ion-card-header>
+
+    <ion-grid>
+      <ion-row>
+        <ion-col size="3" style="text-align:center;">
+          Materia
+        </ion-col>
+        <ion-col size="3" style="text-align:center;">
+          Créditos
+        </ion-col>
+        <ion-col size="3" style="text-align:center;">
+          Horas / Semana
+        </ion-col>
+        <ion-col size="3" style="text-align:center;">
+          Requisitos
+        </ion-col>
+      </ion-row>
+      
+      <ion-row *ngFor = "let materia of semestre.materias">
+        <ion-col size="3">
+          {{materia.nombre}}
+        </ion-col>
+        <ion-col size="3" style="text-align:center;">
+          {{materia.creditos}}
+        </ion-col>
+        <ion-col size="3" style="text-align:center;">
+          {{materia.horas}}
+        </ion-col>
+        <ion-col size="3">
+          <ion-list>
+            <ion-item *ngFor = "let requisito of materia.requisitos">
+              <ion-label>
+                {{requisito.materia}}
+              </ion-label>
+            </ion-item>
+          </ion-list>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+    
+  </ion-card>
+  
 </ion-content>

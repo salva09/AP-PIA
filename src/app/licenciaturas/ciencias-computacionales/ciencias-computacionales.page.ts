@@ -69,7 +69,7 @@ export class CienciasComputacionalesPage implements OnInit {
     {
       titulo: "Plan de Estudios",
       icon: "play-outline",
-      texto: "Consulta el plan de estudios aquí: <a href=\"#\">Plan de Estudios</a>"
+      texto: "Consulta el plan de estudios aquí: <a href=\"/licenciaturas/ciencias-computacionales/plan-lcc\">Plan de Estudios</a>"
     }
   ]
 
