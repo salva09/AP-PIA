@@ -28,8 +28,7 @@ export class ContactoPage implements OnInit {
   hacerFoto() {
     const options: CameraOptions = {
       sourceType: this.camera.PictureSourceType.CAMERA,
-      destinationType: this.camera.DestinationType.FILE_URI,
-
+      destinationType: this.camera.DestinationType.FILE_URI
     };
 
     this.camera.getPicture(options).then((imageData) => {
@@ -46,7 +45,7 @@ export class ContactoPage implements OnInit {
   }
 
   sendForm() {
-    let email = {
+    const email = {
       to: 'sylnne.21@gmail.com',
       cc: this.forma.value.email,
       attachments: [
@@ -57,7 +56,7 @@ export class ContactoPage implements OnInit {
       comentario: this.forma.value.comentario,
       body: this.forma.value.nombre + ': ' + this.forma.value.comentario +
         '<br>Edad: ' + this.forma.value.edad + '<br><br>',
-      app: "Gmail",
+      app: 'Gmail',
       isHtml: true
     };
 
