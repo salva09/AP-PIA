@@ -49,6 +49,8 @@ export class ContactoPage implements OnInit {
     this.sendForm();
     console.log(this.forma.value)
     this.forma.reset();
+    this.foto = null;
+    this.fotoCorreo = null;
   }
 
   sendForm() {
