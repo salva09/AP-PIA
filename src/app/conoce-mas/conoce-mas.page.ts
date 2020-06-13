@@ -1,6 +1,5 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { IonSegment } from '@ionic/angular';
-import {ModalController} from '@ionic/angular';
 
 @Component({
   selector: 'app-conoce-mas',
@@ -11,7 +10,9 @@ export class ConoceMasPage implements OnInit {
 
   conoceMas = 'servicios';
 
-  constructor(private modalC: ModalController) { }
+  constructor() {
+    
+  }
 
   opciones = {
     zoom: {
