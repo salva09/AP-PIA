@@ -28,10 +28,10 @@ export class ContactoPage implements OnInit {
 
   hacerFoto() {
     const options: CameraOptions = {
-      quality: 100,
-      destinationType: this.camera.DestinationType.FILE_URI,
-      encodingType: this.camera.EncodingType.JPEG,
-      mediaType: this.camera.MediaType.PICTURE
+      destinationType: this.camera.DestinationType.DATA_URL,
+      targetWidth: 1000,
+      targetHeight: 1000,
+      quality: 100
     };
 
     this.camera.getPicture(options).then((imageData) => {
