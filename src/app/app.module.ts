@@ -11,6 +11,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { Camera } from '@ionic-native/camera/ngx';
 import { Geolocation } from '@ionic-native/geolocation/ngx';
 import { EmailComposer } from '@ionic-native/email-composer/ngx';
+import { File } from '@ionic-native/file/ngx';
 
 @NgModule({
   declarations: [AppComponent],
@@ -22,7 +23,8 @@ import { EmailComposer } from '@ionic-native/email-composer/ngx';
     Camera,
     EmailComposer,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
-    Geolocation
+    Geolocation,
+    File
   ],
   bootstrap: [AppComponent]
 })

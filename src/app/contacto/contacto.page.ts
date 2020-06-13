@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Camera, CameraOptions } from '@ionic-native/camera/ngx';
 import { EmailComposer } from '@ionic-native/email-composer/ngx';
 import { FormBuilder, Validators, FormGroup } from "@angular/forms";
+import { File } from '@ionic-native/file/ngx';
 
 @Component({
   selector: 'app-contacto',
@@ -12,7 +13,8 @@ export class ContactoPage implements OnInit {
   constructor(
     private camera: Camera,
     public composer: EmailComposer,
-    private formBuilder: FormBuilder
+    private formBuilder: FormBuilder,
+    private file: File
   ) {
     this.forma = this.formBuilder.group({
       nombre: ['', Validators.compose([Validators.required, Validators.pattern('[a-zA-Z ]*')])],
@@ -28,15 +30,16 @@ export class ContactoPage implements OnInit {
 
   hacerFoto() {
     const options: CameraOptions = {
-      destinationType: this.camera.DestinationType.DATA_URL,
-      targetWidth: 1000,
-      targetHeight: 1000,
-      quality: 100
-    };
+    quality: 100,
+    encodingType: this.camera.EncodingType.JPEG,
+    destinationType: this.camera.DestinationType.FILE_URI
+    }
 
     this.camera.getPicture(options).then((imageData) => {
       this.fotoCorreo = imageData;
-      this.foto = 'data:image/jpeg:base64,' + imageData;
+      let filename = imageData.substring(imageData.lastIndexOf('/')+1);
+      let path =  imageData.substring(0,imageData.lastIndexOf('/')+1);
+      this.file.readAsDataURL(path, filename).then(res=> this.foto = res  );
     }, (err) => {
       alert(err);
     });

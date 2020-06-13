@@ -12,7 +12,7 @@
     <ion-content>
       <div *ngFor="let pagina of paginas">
         <ion-menu-toggle>
-          <ion-item [routerLink]="pagina.referencia" routerDirection="root" routerLinkActive="active">
+          <ion-item [routerLink]="pagina.referencia" routerDirection="root" routerLinkActive="active" style="padding-up: 10px; padding-down: 10px;">
             <ion-label>
               <ion-icon [name]="pagina.icon"></ion-icon>
               {{ pagina.nombre }}
