@@ -54,4 +54,15 @@
 
     </ion-card-content>
   </ion-card>
+
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+    <ion-fab-button>
+      <ion-icon name="people"></ion-icon>
+    </ion-fab-button>
+    <ion-fab-list side="top">
+      <ion-fab-button  href="https://www.facebook.com/FCFM.UANL/"><ion-icon name="logo-facebook"></ion-icon></ion-fab-button>
+      <ion-fab-button href="https://twitter.com/fcfmuanl?lang=en"><ion-icon name="logo-twitter"></ion-icon></ion-fab-button>
+      <ion-fab-button [routerLink]="['/contacto']"><ion-icon name ="mail"></ion-icon></ion-fab-button>
+    </ion-fab-list>
+  </ion-fab>
 </ion-content>

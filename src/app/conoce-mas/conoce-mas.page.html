@@ -366,13 +366,13 @@
       <br>
       <ion-slides zoom [options]="opciones">
         <ion-slide>
-          <img src='assets/mapa-plantaBaja.PNG' alt="">
+          <img src='assets/mapa-plantaBaja.PNG'>
         </ion-slide>
         <ion-slide>
-          <img src='assets/mapa-piso1.PNG' alt="">
+          <img src='assets/mapa-piso1.PNG'>
         </ion-slide>
         <ion-slide>
-          <img src='assets/mapa-piso2.PNG' alt="">
+          <img src='assets/mapa-piso2.PNG'>
         </ion-slide>
       </ion-slides>
       <br>
@@ -382,10 +382,10 @@
       <br>
       <ion-slides zoom [options]="opciones">
         <ion-slide>
-          <img src='assets/mapa-edificio3-plantabaja.PNG' alt="">
+          <img src='assets/mapa-edificio3-plantabaja.PNG'>
         </ion-slide>
         <ion-slide>
-          <img src='assets/mapa-edificio3-piso1.PNG' alt="">
+          <img src='assets/mapa-edificio3-piso1.PNG'>
         </ion-slide>
       </ion-slides>
       <br>
@@ -395,16 +395,27 @@
       <br>
       <ion-slides zoom [options]="opciones">
         <ion-slide>
-          <img src='assets/mapa-CSI-plantabaja.PNG' alt="">
+          <img src='assets/mapa-CSI-plantabaja.PNG'>
         </ion-slide>
         <ion-slide>
-          <img src='assets/mapa-CSI-piso1.PNG' alt="">
+          <img src='assets/mapa-CSI-piso1.PNG'>
         </ion-slide>
         <ion-slide>
-          <img src='assets/mapa-CSI-piso2.PNG' alt="">
+          <img src='assets/mapa-CSI-piso2.PNG'>
         </ion-slide>
       </ion-slides>
       <br>
     </ion-list>
   </div>
+
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+    <ion-fab-button>
+      <ion-icon name="people"></ion-icon>
+    </ion-fab-button>
+    <ion-fab-list side="top">
+      <ion-fab-button  href="https://www.facebook.com/FCFM.UANL/"><ion-icon name="logo-facebook"></ion-icon></ion-fab-button>
+      <ion-fab-button href="https://twitter.com/fcfmuanl?lang=en"><ion-icon name="logo-twitter"></ion-icon></ion-fab-button>
+      <ion-fab-button [routerLink]="['/contacto']"><ion-icon name ="mail"></ion-icon></ion-fab-button>
+    </ion-fab-list>
+  </ion-fab>
 </ion-content>
