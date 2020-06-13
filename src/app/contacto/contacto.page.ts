@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Camera, CameraOptions } from '@ionic-native/camera/ngx';
 import { EmailComposer } from '@ionic-native/email-composer/ngx';
 import { FormBuilder, Validators, FormGroup } from "@angular/forms";
+import { File } from '@ionic-native/file/ngx';
 
 @Component({
   selector: 'app-contacto',
@@ -12,7 +13,8 @@ export class ContactoPage implements OnInit {
   constructor(
     private camera: Camera,
     public composer: EmailComposer,
-    private formBuilder: FormBuilder
+    private formBuilder: FormBuilder,
+    private file: File
   ) {
     this.forma = this.formBuilder.group({
       nombre: ['', Validators.compose([Validators.required, Validators.pattern('[a-zA-Z ]*')])],
@@ -24,18 +26,22 @@ export class ContactoPage implements OnInit {
 
   forma: FormGroup = null;
   foto: any;
+  fotoCorreo: any;
 
   hacerFoto() {
     const options: CameraOptions = {
-      sourceType: this.camera.PictureSourceType.CAMERA,
-      destinationType: this.camera.DestinationType.FILE_URI,
-
-    };
+    quality: 100,
+    encodingType: this.camera.EncodingType.JPEG,
+    destinationType: this.camera.DestinationType.FILE_URI
+    }
 
     this.camera.getPicture(options).then((imageData) => {
-      this.foto = imageData;
+      this.fotoCorreo = imageData;
+      let filename = imageData.substring(imageData.lastIndexOf('/')+1);
+      let path =  imageData.substring(0,imageData.lastIndexOf('/')+1);
+      this.file.readAsDataURL(path, filename).then(res=> this.foto = res  );
     }, (err) => {
-      console.log(err);
+      alert(err);
     });
   }
 
@@ -43,21 +49,23 @@ export class ContactoPage implements OnInit {
     this.sendForm();
     console.log(this.forma.value)
     this.forma.reset();
+    this.foto = null;
+    this.fotoCorreo = null;
   }
 
   sendForm() {
-    let email = {
+    const email = {
       to: 'sylnne.21@gmail.com',
       cc: this.forma.value.email,
       attachments: [
-        this.foto
+        this.fotoCorreo
       ],
-      subject: 'Suicidio masivo en la facu',
+      subject: 'Información de contacto FCFM',
       nombre: this.forma.value.nombre,
       comentario: this.forma.value.comentario,
       body: this.forma.value.nombre + ': ' + this.forma.value.comentario +
         '<br>Edad: ' + this.forma.value.edad + '<br><br>',
-      app: "Gmail",
+      app: 'Gmail',
       isHtml: true
     };
 

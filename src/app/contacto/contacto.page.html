@@ -9,8 +9,6 @@
     </ion-title>
   </ion-toolbar>
 </ion-header>
-<!-- No se si lo del formulario iba en contacto xD - SILVIA -->
-
 
 <ion-content>
 
@@ -40,7 +38,7 @@
       </form>
 
       <ion-button (click)="hacerFoto()" expand="block">Tomar fotografía</ion-button>
-      <img [src]="foto" *ngIf="foto" />
+      <ion-img [src]="foto" *ngIf="foto"></ion-img>
 
       <ion-button (click)="submit()" type="submit" [disabled]="!forma.valid" expand="block">
         Enviar datos

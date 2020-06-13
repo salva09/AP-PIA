@@ -10,6 +10,7 @@ import { Animation, AnimationController } from '@ionic/angular';
   templateUrl: 'app.component.html',
   styleUrls: ['app.component.scss']
 })
+
 export class AppComponent {
   constructor(
     private platform: Platform,
@@ -25,11 +26,6 @@ export class AppComponent {
       nombre: 'Inicio',
       referencia: '/home',
       icon: 'home-outline'
-    },
-    {
-      nombre: 'Contacto',
-      referencia: '/contacto',
-      icon: 'call-outline'
     },
     {
       nombre: 'Licenciaturas',
@@ -109,6 +105,11 @@ export class AppComponent {
       nombre: 'Explorar',
       referencia: '/conoce-mas',
       icon: 'compass'
+    },
+    {
+      nombre: 'Contacto',
+      referencia: '/contacto',
+      icon: 'call-outline'
     }
   ];
 

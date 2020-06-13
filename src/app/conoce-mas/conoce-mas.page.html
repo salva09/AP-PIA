@@ -41,7 +41,7 @@
       <ion-card>
         <ion-card-header>
           <ion-img
-            src="http://www.fcfm.uanl.mx/sites/default/files/styles/imagen_articulo/public/FF4A9561.JPG?itok=EXo1SFfk">
+            src="assets/Servicios/escolar.jpg">
           </ion-img>
         </ion-card-header>
         <ion-card-content>
@@ -97,7 +97,7 @@
       <ion-card>
         <ion-card-header>
           <ion-img
-            src="http://www.fcfm.uanl.mx/sites/default/files/styles/imagen_articulo/public/FF4A9695.JPG?itok=IPDYwDhY">
+            src="assets/Servicios/tesoreria.jpg">
           </ion-img>
         </ion-card-header>
         <ion-card-content>
@@ -125,7 +125,7 @@
       <ion-card>
         <ion-card-header>
           <ion-img
-            src="https://lh3.googleusercontent.com/proxy/N9afqO33whEcHsShqV006usoXbyT7iQOEle8N6ZLJUO9PMrnGSYtFgVfd9uu5iIrDtgcAXtzJ9LSZacqOmITrZTpbEXNmJAIDp8D_oyaKr8gyHLwU2C2CahKrpCyrNuaXQ">
+            src="assets/Servicios/biblioteca.jpg">
           </ion-img>
         </ion-card-header>
         <ion-card-content>
@@ -169,7 +169,7 @@
       <ion-card>
         <ion-card-header>
           <ion-img
-            src="http://www.fcfm.uanl.mx/sites/default/files/styles/imagen_articulo/public/IMG_0318.JPG?itok=PoFNRBe6">
+            src="assets/Servicios/asesorias.jpg">
           </ion-img>
         </ion-card-header>
         <ion-card-content>
@@ -199,14 +199,14 @@
       <ion-card>
         <ion-card-header>
           <ion-img
-            src="http://www.fcfm.uanl.mx/sites/default/files/styles/imagen_articulo/public/IMG_9958.JPG?itok=FqfcHlYm">
+            src="assets/Servicios/desarrollo-estudiantil.jpg">
           </ion-img>
         </ion-card-header>
         <ion-card-content>
           <ion-title style="text-align:center;">Desarrollo Estudiantil</ion-title>
           <ion-label>
             Este departamento tiene como funcion atender a los alumnos de la facultad orientandolos con la persona
-             o departamento indicado, para resolver cualquier problema o inquietud que tengan.
+            o departamento indicado, para resolver cualquier problema o inquietud que tengan.
           </ion-label>
           <ion-label><b>Servicios: </b></ion-label>
           <ul>
@@ -247,17 +247,20 @@
       <!--Programa Emprendedor-->
       <ion-card>
         <ion-card-header>
-          <ion-img
-            src="https://www.nerdilandia.com/wp-content/uploads/2016/07/cursos-para-emprendedores.jpg">
+          <ion-img src="assets/Servicios/emprendedor.jpg">
           </ion-img>
         </ion-card-header>
         <ion-card-content>
           <ion-title style="text-align:center;">Programa Emprendedor</ion-title>
-          <ion-label><b><br>El Emprendedor en FCFM<br></b><i>Cimentando el presente, construyendo el futuro<br><br></i></ion-label>
+          <ion-label><b><br>El Emprendedor en FCFM<br></b><i>Cimentando el presente, construyendo el futuro<br><br></i>
+          </ion-label>
           <ion-label>
-            Este programa que ofrece la Facultad de Ciencias Fisico Matematicas, tiene como eje principal al Emprendedor, el cual es creativo
-             y poseedor de un cumulo de conocimientos con base cientifica y tecnologica que, en equilibrio con su desarrollo humano y su Responsabilidad
-             social, es capaz de estructurar su proyecto de vida, ofreciendo bienes y servicios, formando empresas competitivas y detonantes del desarrollo economico regional y nacional.
+            Este programa que ofrece la Facultad de Ciencias Fisico Matematicas, tiene como eje principal al
+            Emprendedor, el cual es creativo
+            y poseedor de un cumulo de conocimientos con base cientifica y tecnologica que, en equilibrio con su
+            desarrollo humano y su Responsabilidad
+            social, es capaz de estructurar su proyecto de vida, ofreciendo bienes y servicios, formando empresas
+            competitivas y detonantes del desarrollo economico regional y nacional.
           </ion-label>
         </ion-card-content>
       </ion-card>
@@ -316,8 +319,8 @@
         <ion-card-content>
           <ion-label>
             Las <b>Actividades de Formacion Integral (AFI)</b> tienen la finalidad de enriquecer
-             y complementar la formacion curricular del estudiante mediante la participacion en eventos
-             y/o programas de distintas categorias o areas:
+            y complementar la formacion curricular del estudiante mediante la participacion en eventos
+            y/o programas de distintas categorias o areas:
           </ion-label>
           <ul>
             <li>Academicas</li>
@@ -328,7 +331,9 @@
             <li>Innovacion y emprendimiento</li>
             <li>Aprendizaje de idiomas</li>
           </ul>
-          <a href="http://www.fcfm.uanl.mx/sites/default/files/Lineamientos_AFI_2.pdf"><ion-button expand="full">Más información</ion-button></a>
+          <a href="http://www.fcfm.uanl.mx/sites/default/files/Lineamientos_AFI_2.pdf">
+            <ion-button expand="full">Más información</ion-button>
+          </a>
         </ion-card-content>
       </ion-card>
     </ion-list>
@@ -338,107 +343,65 @@
         <ion-title>Ubicacion General</ion-title>
       </ion-item-divider>
       <br>
-      <ion-slides zoom [options]="opciones">
+      <ion-slides zoom [options]="opciones" style="height:auto; width:auto;">
         <ion-slide>
-          <div class="swiper-zoom-container">
-            <img src='assets/mapa-ubicaciongeneral.PNG' alt="">
-          </div>
+          <img src='assets/mapa-ubicaciongeneral.PNG' alt="">
+        </ion-slide>
+        <ion-slide>
+          <ion-card>
+            <ion-card-content>
+              <ion-title>
+                Más informacion
+              </ion-title>
+              <ion-button href="http://www.fcfm.uanl.mx/sites/default/files/img/GuiadelEstudiante.pdf" expand="full">
+                Guia del Estudiante</ion-button>
+            </ion-card-content>
+          </ion-card>
         </ion-slide>
       </ion-slides>
       <br>
       <ion-item-divider style="background:#E5E5E5">
-        <ion-title>FCFM - Planta Baja</ion-title>
+        <ion-title>FCFM</ion-title>
       </ion-item-divider>
       <br>
       <ion-slides zoom [options]="opciones">
         <ion-slide>
-          <div class="swiper-zoom-container">
-            <img src='assets/mapa-plantaBaja.PNG' alt="">
-          </div>
+          <img src='assets/mapa-plantaBaja.PNG' alt="">
+        </ion-slide>
+        <ion-slide>
+          <img src='assets/mapa-piso1.PNG' alt="">
+        </ion-slide>
+        <ion-slide>
+          <img src='assets/mapa-piso2.PNG' alt="">
         </ion-slide>
       </ion-slides>
       <br>
       <ion-item-divider style="background:#E5E5E5">
-        <ion-title>FCFM - Piso 1</ion-title>
+        <ion-title>Edificio 3</ion-title>
       </ion-item-divider>
       <br>
       <ion-slides zoom [options]="opciones">
         <ion-slide>
-          <div class="swiper-zoom-container">
-            <img src='assets/mapa-piso1.PNG' alt="">
-          </div>
+          <img src='assets/mapa-edificio3-plantabaja.PNG' alt="">
+        </ion-slide>
+        <ion-slide>
+          <img src='assets/mapa-edificio3-piso1.PNG' alt="">
         </ion-slide>
       </ion-slides>
       <br>
       <ion-item-divider style="background:#E5E5E5">
-        <ion-title>FCFM - Piso 2</ion-title>
+        <ion-title>CSI</ion-title>
       </ion-item-divider>
       <br>
       <ion-slides zoom [options]="opciones">
         <ion-slide>
-          <div class="swiper-zoom-container">
-            <img src='assets/mapa-piso2.PNG' alt="">
-          </div>
+          <img src='assets/mapa-CSI-plantabaja.PNG' alt="">
         </ion-slide>
-      </ion-slides>
-      <br>
-      <ion-item-divider style="background:#E5E5E5">
-        <ion-title>Edificio 3 - Planta Baja</ion-title>
-      </ion-item-divider>
-      <br>
-      <ion-slides zoom [options]="opciones">
         <ion-slide>
-          <div class="swiper-zoom-container">
-            <img src='assets/mapa-edificio3-plantabaja.PNG' alt="">
-          </div>
+          <img src='assets/mapa-CSI-piso1.PNG' alt="">
         </ion-slide>
-      </ion-slides>
-      <br>
-      <ion-item-divider style="background:#E5E5E5">
-        <ion-title>Edificio 3 - Piso 1</ion-title>
-      </ion-item-divider>
-      <br>
-      <ion-slides zoom [options]="opciones">
         <ion-slide>
-          <div class="swiper-zoom-container">
-            <img src='assets/mapa-edificio3-piso1.PNG' alt="">
-          </div>
-        </ion-slide>
-      </ion-slides>
-      <br>
-      <ion-item-divider style="background:#E5E5E5">
-        <ion-title>CSI - Planta Baja</ion-title>
-      </ion-item-divider>
-      <br>
-      <ion-slides zoom [options]="opciones">
-        <ion-slide>
-          <div class="swiper-zoom-container">
-            <img src='assets/mapa-CSI-plantabaja.PNG' alt="">
-          </div>
-        </ion-slide>
-      </ion-slides>
-      <br>
-      <ion-item-divider style="background:#E5E5E5">
-        <ion-title>CSI - Piso 1</ion-title>
-      </ion-item-divider>
-      <br>
-      <ion-slides zoom [options]="opciones">
-        <ion-slide>
-          <div class="swiper-zoom-container">
-            <img src='assets/mapa-CSI-piso1.PNG' alt="">
-          </div>
-        </ion-slide>
-      </ion-slides>
-      <br>
-      <ion-item-divider style="background:#E5E5E5">
-        <ion-title>CSI - Piso 2</ion-title>
-      </ion-item-divider>
-      <br>
-      <ion-slides zoom [options]="opciones">
-        <ion-slide>
-          <div class="swiper-zoom-container">
-            <img src='assets/mapa-CSI-piso2.PNG' alt="">
-          </div>
+          <img src='assets/mapa-CSI-piso2.PNG' alt="">
         </ion-slide>
       </ion-slides>
       <br>

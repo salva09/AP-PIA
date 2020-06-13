@@ -78,7 +78,7 @@ export class MatematicasPage implements OnInit {
     {
       titulo: 'Plan de Estudios',
       clase: "e",
-      texto: 'Consulta el plan de estudios aquí: <a href="#">Plan de Estudios</a>'
+      texto: 'Consulta el plan de estudios aquí: <a href=\"/licenciaturas/matematicas/plan-lm\">Plan de Estudios</a>'
     }
   ];
 
