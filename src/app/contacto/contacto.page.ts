@@ -28,9 +28,9 @@ export class ContactoPage implements OnInit {
 
   hacerFoto() {
     const options: CameraOptions = {
-      destinationType: this.camera.DestinationType.FILE_URI,
-      targetHeight: 1000,
+      destinationType: this.camera.DestinationType.DATA_URL,
       targetWidth: 1000,
+      targetHeight: 1000,
       quality: 100
     };
 
