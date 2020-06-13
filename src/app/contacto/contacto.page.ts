@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Camera, CameraOptions } from '@ionic-native/camera/ngx';
 import { EmailComposer } from '@ionic-native/email-composer/ngx';
 import { FormBuilder, Validators, FormGroup } from "@angular/forms";
+import { File } from '@ionic-native/file/ngx';
 
 @Component({
   selector: 'app-contacto',
@@ -12,7 +13,8 @@ export class ContactoPage implements OnInit {
   constructor(
     private camera: Camera,
     public composer: EmailComposer,
-    private formBuilder: FormBuilder
+    private formBuilder: FormBuilder,
+    private file: File
   ) {
     this.forma = this.formBuilder.group({
       nombre: ['', Validators.compose([Validators.required, Validators.pattern('[a-zA-Z ]*')])],
@@ -28,15 +30,16 @@ export class ContactoPage implements OnInit {
 
   hacerFoto() {
     const options: CameraOptions = {
-      destinationType: this.camera.DestinationType.FILE_URI,
-      targetHeight: 1000,
-      targetWidth: 1000,
-      quality: 100
-    };
+    quality: 100,
+    encodingType: this.camera.EncodingType.JPEG,
+    destinationType: this.camera.DestinationType.FILE_URI
+    }
 
     this.camera.getPicture(options).then((imageData) => {
       this.fotoCorreo = imageData;
-      this.foto = 'data:image/jpeg:base64,' + imageData;
+      let filename = imageData.substring(imageData.lastIndexOf('/')+1);
+      let path =  imageData.substring(0,imageData.lastIndexOf('/')+1);
+      this.file.readAsDataURL(path, filename).then(res=> this.foto = res  );
     }, (err) => {
       alert(err);
     });
@@ -46,6 +49,8 @@ export class ContactoPage implements OnInit {
     this.sendForm();
     console.log(this.forma.value)
     this.forma.reset();
+    this.foto = null;
+    this.fotoCorreo = null;
   }
 
   sendForm() {
@@ -55,7 +60,7 @@ export class ContactoPage implements OnInit {
       attachments: [
         this.fotoCorreo
       ],
-      subject: 'Suicidio masivo en la facu',
+      subject: 'Información de contacto FCFM',
       nombre: this.forma.value.nombre,
       comentario: this.forma.value.comentario,
       body: this.forma.value.nombre + ': ' + this.forma.value.comentario +
