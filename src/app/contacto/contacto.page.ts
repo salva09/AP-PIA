@@ -60,7 +60,7 @@ export class ContactoPage implements OnInit {
       attachments: [
         this.fotoCorreo
       ],
-      subject: 'Suicidio masivo en la facu',
+      subject: 'Información de contacto FCFM',
       nombre: this.forma.value.nombre,
       comentario: this.forma.value.comentario,
       body: this.forma.value.nombre + ': ' + this.forma.value.comentario +
